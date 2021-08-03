@@ -1,4 +1,13 @@
-/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/GestionprsApplication.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/grades/Grade.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/users/User.java
-/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/caissiers/Caissier.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/legions/Legion.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/groupements/Groupement.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/formations/Formation.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/comptes/Compte.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/UserController.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/GestionprsApplication.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/affectations/Affectation.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/missions/MisionsUser.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/missions/Mision.java

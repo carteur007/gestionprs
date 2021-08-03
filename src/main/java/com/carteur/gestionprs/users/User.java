@@ -1,9 +1,10 @@
 package com.carteur.gestionprs.users;
 
-import javax.persistence.Entity;
-import org.springframework.data.annotation.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import java.util.List;
+
+import javax.persistence.*;
+
+import com.carteur.gestionprs.grades.Grade;
 
 
 @Entity
@@ -12,26 +13,42 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "nom")
     private  String nom;
+    @Column(name = "prenom")
     private  String prenom;
+    @Column(name = "nomMere")
     private  String nomMere;
+    @Column(name = "nomPere")
     private  String nomPere;
+    @Column(name = "email")
     private  String email;
+    @Column(name = "matricule")
     private  String matricule;
+    @Column(name = "telephone")
     private  String telephone;
+    @Column(name = "lieuNaissance")
     private  String lieuNaissance;
+    @Column(name = "dateNaissance")
     private  String dateNaissance;
+    @Column(name = "dateEntree")
     private  String dateEntree;
+    @Column(name = "centreFormation")
     private  String centreFormation;
+    @Column(name = "region")
     private  String region;
-    private  String arrondissement;
+    @Column(name = "arrondissement")
+    private  String arrondissement;  
 
     public User() {
         super();
     }
-    
-    
-
+    public User(String nom, String prenom, String nomMere, 
+        String nomPere, String email, String matricule, String telephone, 
+        String lieuNaissance, String dateNaissance, String dateEntree, 
+        String centreFormation, String region, String arrondissement) {
+        super();
+    }
     /**
      * @return long return the id
      */

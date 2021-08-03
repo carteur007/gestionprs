@@ -1,10 +1,7 @@
 package com.carteur.gestionprs.formations;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import javax.persistence.*;
 
 @Entity
 public class Formation {

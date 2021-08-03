@@ -5,16 +5,14 @@ import javax.persistence.Entity;
 import com.carteur.gestionprs.users.User;
 
 import javax.persistence.*;
-
-import org.springframework.data.annotation.Id;
-
 @Entity
 public class MisionsUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private User user;
-    private Mision mission;
+    /* Provisoirement*/
+    private int user;
+    private int mission;
 
     /**
      * @return long return the id
@@ -29,32 +27,33 @@ public class MisionsUser {
     public void setId(long id) {
         this.id = id;
     }
+    
 
     /**
-     * @return User return the user
+     * @return int return the user
      */
-    public User getUser() {
+    public int getUser() {
         return user;
     }
 
     /**
      * @param user the user to set
      */
-    public void setUser(User user) {
+    public void setUser(int user) {
         this.user = user;
     }
 
     /**
-     * @return Mision return the mission
+     * @return int return the mission
      */
-    public Mision getMission() {
+    public int getMission() {
         return mission;
     }
 
     /**
      * @param mission the mission to set
      */
-    public void setMission(Mision mission) {
+    public void setMission(int mission) {
         this.mission = mission;
     }
 
