@@ -9,6 +9,6 @@ export class AppComponent {
 
   title: string;
   constructor() {
-    this.title = 'gestion du personnel ';
+    this.title = 'Gestion du Gersonnel ';
   }
 }
