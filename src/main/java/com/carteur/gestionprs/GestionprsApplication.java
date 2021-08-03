@@ -23,5 +23,6 @@ public class GestionprsApplication {
             userRepository.findAll().forEach(System.out::println);
         };
     }*/
+     
 
 }
