@@ -1,6 +1,10 @@
 package com.carteur.gestionprs.missions;
 
+import java.util.Set;
+
 import javax.persistence.*;
+
+import com.carteur.gestionprs.users.User;
 
 @Entity
 public class Mision {
@@ -13,6 +17,12 @@ public class Mision {
     private String dateDebut;
     private String dateFin;
     private String dateModification;
+
+    @ManyToMany
+    @JoinTable(name = "USER_MISSION_MISIONS", joinColumns = {
+            @JoinColumn(name = "mision_id")
+    }, inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private Set<User> userMissions;
 
     public Mision() {
         super();

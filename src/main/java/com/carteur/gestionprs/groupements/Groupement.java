@@ -1,9 +1,14 @@
 package com.carteur.gestionprs.groupements;
 
 
+import java.util.Set;
+
 import javax.persistence.*;
 
+import com.carteur.gestionprs.users.User;
+
 @Entity
+@Table(name = "GROUPEMENT")
 public class Groupement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,10 +18,17 @@ public class Groupement {
     private String nom;
     private String pseudo;
     
+    @ManyToMany
+    @JoinTable(name = "AFFECTATION", joinColumns = {
+            @JoinColumn(name = "groupement_id")
+    }, inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private Set<User> userGroupements;
+
+
     public Groupement() {
         super();
     }
-
+    
     /**
      * @return long return the id
      */
@@ -85,6 +97,21 @@ public class Groupement {
      */
     public void setPseudo(String pseudo) {
         this.pseudo = pseudo;
+    }
+
+
+    /**
+     * @return Set<User> return the userGroupements
+     */
+    public Set<User> getUserGroupements() {
+        return userGroupements;
+    }
+
+    /**
+     * @param userGroupements the userGroupements to set
+     */
+    public void setUserGroupements(Set<User> userGroupements) {
+        this.userGroupements = userGroupements;
     }
 
 }

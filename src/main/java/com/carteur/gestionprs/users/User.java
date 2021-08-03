@@ -1,13 +1,19 @@
 package com.carteur.gestionprs.users;
 
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.caissiers.Caissier;
+import com.carteur.gestionprs.comptes.Compte;
+import com.carteur.gestionprs.formations.Formation;
 import com.carteur.gestionprs.grades.Grade;
+import com.carteur.gestionprs.groupements.Groupement;
+import com.carteur.gestionprs.missions.Mision;
 
 
 @Entity
+@Table(name = "USER")
 public class User {
     
     @Id
@@ -22,7 +28,7 @@ public class User {
     @Column(name = "nomPere")
     private  String nomPere;
     @Column(name = "email")
-    private  String email;
+    private  String email;  
     @Column(name = "matricule")
     private  String matricule;
     @Column(name = "telephone")
@@ -39,6 +45,25 @@ public class User {
     private  String region;
     @Column(name = "arrondissement")
     private  String arrondissement;  
+
+    @OneToOne(mappedBy = "userCompte", cascade = CascadeType.ALL, orphanRemoval = true)
+    @PrimaryKeyJoinColumn
+    private Compte compte;
+
+    @OneToMany(mappedBy = "userGrade", cascade = CascadeType.ALL)
+    private Set<Grade> grades = new HashSet<>();
+
+    @OneToMany(mappedBy = "userCaissier", cascade = CascadeType.ALL)
+    private Set<Caissier> caissiers = new HashSet<>();
+
+    @OneToMany(mappedBy = "userFormation", cascade = CascadeType.ALL)
+    private Set<Formation> formations = new HashSet<>();
+
+    @ManyToMany(mappedBy = "userMissions")
+    private Set<Mision> missions = new HashSet<>();
+
+    @ManyToMany(mappedBy = "userGroupements")
+    private Set<Groupement> groupements = new HashSet<>();
 
     public User() {
         super();
@@ -243,6 +268,91 @@ public class User {
      */
     public void setArrondissement(String arrondissement) {
         this.arrondissement = arrondissement;
+    }
+
+
+    /**
+     * @return Compte return the compte
+     */
+    public Compte getCompte() {
+        return compte;
+    }
+
+    /**
+     * @param compte the compte to set
+     */
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
+
+    /**
+     * @return Set<Grade> return the grades
+     */
+    public Set<Grade> getGrades() {
+        return grades;
+    }
+
+    /**
+     * @param grades the grades to set
+     */
+    public void setGrades(Set<Grade> grades) {
+        this.grades = grades;
+    }
+
+    /**
+     * @return Set<Caissier> return the caissiers
+     */
+    public Set<Caissier> getCaissiers() {
+        return caissiers;
+    }
+
+    /**
+     * @param caissiers the caissiers to set
+     */
+    public void setCaissiers(Set<Caissier> caissiers) {
+        this.caissiers = caissiers;
+    }
+
+    /**
+     * @return Set<Formation> return the formations
+     */
+    public Set<Formation> getFormations() {
+        return formations;
+    }
+
+    /**
+     * @param formations the formations to set
+     */
+    public void setFormations(Set<Formation> formations) {
+        this.formations = formations;
+    }
+
+    /**
+     * @return Set<Mision> return the missions
+     */
+    public Set<Mision> getMissions() {
+        return missions;
+    }
+
+    /**
+     * @param missions the missions to set
+     */
+    public void setMissions(Set<Mision> missions) {
+        this.missions = missions;
+    }
+
+    /**
+     * @return Set<Groupement> return the groupements
+     */
+    public Set<Groupement> getGroupements() {
+        return groupements;
+    }
+
+    /**
+     * @param groupements the groupements to set
+     */
+    public void setGroupements(Set<Groupement> groupements) {
+        this.groupements = groupements;
     }
 
 }

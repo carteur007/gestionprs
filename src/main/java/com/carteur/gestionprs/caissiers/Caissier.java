@@ -1,9 +1,15 @@
 package com.carteur.gestionprs.caissiers;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Caissier {
@@ -18,7 +24,10 @@ public class Caissier {
     private String sanction;
     private String typeFacture;
 
-    
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private User userCaissier;
 
     /**
      * @return long return the id

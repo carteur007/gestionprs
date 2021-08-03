@@ -2,6 +2,9 @@ package com.carteur.gestionprs.grades;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Grade {
     @Id
@@ -12,6 +15,11 @@ public class Grade {
     private String dateObtention;
     private String distinctiation;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    
+    private User userGrade;
     public Grade() {
         super();
     }

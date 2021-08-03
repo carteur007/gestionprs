@@ -2,6 +2,8 @@ package com.carteur.gestionprs.comptes;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.users.User;
+
 @Entity
 public class Compte {
     @Id
@@ -12,6 +14,11 @@ public class Compte {
     private String telephone;
     private String fonction;
     private String photo;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    @MapsId
+    private User userCompte;
 
     public Compte(String matricule, String motPasse, String telephone, String fonction) {
         this.matricule = matricule;

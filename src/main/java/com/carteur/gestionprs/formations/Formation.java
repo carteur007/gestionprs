@@ -3,6 +3,9 @@ package com.carteur.gestionprs.formations;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Formation {
     @Id
@@ -14,6 +17,11 @@ public class Formation {
     private String diplome;
     private String centreFormation;
     private String corpsFormation;
+    
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private User userFormation;
 
     public Formation() {
         super();
