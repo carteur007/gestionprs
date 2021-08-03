@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4c5df84-8f68-4d3f-b078-3e79a2215ad8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wD8IWeHKREMquAGLgKjdAXZZaX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GestionprsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gestionprs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.carteur.gestionprs.GestionprsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4c5df84-8f68-4d3f-b078-3e79a2215ad8" name="Default Changelist" comment="" />
+      <created>1627981718572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627981718572</updated>
+      <workItem from="1627981735287" duration="1535000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="29" y="145" width="732" height="644" key="#Inspections" timestamp="1627982935496">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="29" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1627982935496" />
+    <state x="269" y="332" width="251" height="270" key="#Notifications" timestamp="1627981769683">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="269" y="332" width="251" height="270" key="#Notifications/0.27.1600.873@0.27.1600.873" timestamp="1627981769683" />
+    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1627982822830">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1627982822830" />
+  </component>
+</project>
