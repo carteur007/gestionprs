@@ -1,5 +1,124 @@
 package com.carteur.gestionprs.missions;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
+
+@Entity
 public class Mision {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String status;
+    private String rapport;
+    private String observation;
+    private String dateDebut;
+    private String dateFin;
+    private String dateModification;
+
+    public Mision() {
+        super();
+    }
     
+
+    /**
+     * @return long return the id
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    /**
+     * @return String return the status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * @return String return the rapport
+     */
+    public String getRapport() {
+        return rapport;
+    }
+
+    /**
+     * @param rapport the rapport to set
+     */
+    public void setRapport(String rapport) {
+        this.rapport = rapport;
+    }
+
+    /**
+     * @return String return the observation
+     */
+    public String getObservation() {
+        return observation;
+    }
+
+    /**
+     * @param observation the observation to set
+     */
+    public void setObservation(String observation) {
+        this.observation = observation;
+    }
+
+    /**
+     * @return String return the dateDebut
+     */
+    public String getDateDebut() {
+        return dateDebut;
+    }
+
+    /**
+     * @param dateDebut the dateDebut to set
+     */
+    public void setDateDebut(String dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    /**
+     * @return String return the dateFin
+     */
+    public String getDateFin() {
+        return dateFin;
+    }
+
+    /**
+     * @param dateFin the dateFin to set
+     */
+    public void setDateFin(String dateFin) {
+        this.dateFin = dateFin;
+    }
+
+    /**
+     * @return String return the dateModification
+     */
+    public String getDateModification() {
+        return dateModification;
+    }
+
+    /**
+     * @param dateModification the dateModification to set
+     */
+    public void setDateModification(String dateModification) {
+        this.dateModification = dateModification;
+    }
+
 }
