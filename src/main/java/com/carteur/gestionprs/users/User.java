@@ -4,12 +4,12 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.affectations.Affectation;
 import com.carteur.gestionprs.caissiers.Caissier;
 import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.formations.Formation;
 import com.carteur.gestionprs.grades.Grade;
-import com.carteur.gestionprs.groupements.Groupement;
-import com.carteur.gestionprs.missions.Mision;
+import com.carteur.gestionprs.missions.MisionsUser;
 
 
 @Entity
@@ -46,24 +46,24 @@ public class User {
     @Column(name = "arrondissement")
     private  String arrondissement;  
 
-    @OneToOne(mappedBy = "userCompte", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @PrimaryKeyJoinColumn
     private Compte compte;
 
-    @OneToMany(mappedBy = "userGrade", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Grade> grades = new HashSet<>();
 
-    @OneToMany(mappedBy = "userCaissier", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Caissier> caissiers = new HashSet<>();
 
-    @OneToMany(mappedBy = "userFormation", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Formation> formations = new HashSet<>();
 
-    @ManyToMany(mappedBy = "userMissions")
-    private Set<Mision> missions = new HashSet<>();
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<MisionsUser> usermissions = new HashSet<>();
 
-    @ManyToMany(mappedBy = "userGroupements")
-    private Set<Groupement> groupements = new HashSet<>();
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Affectation> affectations = new HashSet<>();
 
     public User() {
         super();
@@ -326,33 +326,32 @@ public class User {
     public void setFormations(Set<Formation> formations) {
         this.formations = formations;
     }
-
     /**
-     * @return Set<Mision> return the missions
+     * @return Set<MisionsUser> return the usermissions
      */
-    public Set<Mision> getMissions() {
-        return missions;
+    public Set<MisionsUser> getUsermissions() {
+        return usermissions;
     }
 
     /**
-     * @param missions the missions to set
+     * @param usermissions the usermissions to set
      */
-    public void setMissions(Set<Mision> missions) {
-        this.missions = missions;
+    public void setUsermissions(Set<MisionsUser> usermissions) {
+        this.usermissions = usermissions;
     }
 
     /**
-     * @return Set<Groupement> return the groupements
+     * @return Set<Affectation> return the affectations
      */
-    public Set<Groupement> getGroupements() {
-        return groupements;
+    public Set<Affectation> getAffectations() {
+        return affectations;
     }
 
     /**
-     * @param groupements the groupements to set
+     * @param affectations the affectations to set
      */
-    public void setGroupements(Set<Groupement> groupements) {
-        this.groupements = groupements;
+    public void setAffectations(Set<Affectation> affectations) {
+        this.affectations = affectations;
     }
 
 }

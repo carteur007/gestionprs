@@ -18,8 +18,8 @@ public class Grade {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private User user;
     
-    private User userGrade;
     public Grade() {
         super();
     }
@@ -92,6 +92,21 @@ public class Grade {
      */
     public void setDistinctiation(String distinctiation) {
         this.distinctiation = distinctiation;
+    }
+
+
+    /**
+     * @return User return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }

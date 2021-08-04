@@ -13,11 +13,14 @@ public class MisionsUser {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private User user;
-    @ManyToOne
-    @JoinColumn(name = "mision_id")
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "mission_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Mision mission;
     /**
      * @param id the id to set
@@ -25,8 +28,6 @@ public class MisionsUser {
     public void setId(long id) {
         this.id = id;
     }
-
-
     /**
      * @return long return the id
      */
