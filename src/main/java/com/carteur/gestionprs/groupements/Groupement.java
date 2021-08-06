@@ -1,11 +1,14 @@
 package com.carteur.gestionprs.groupements;
 
 
-import java.util.Set;
+import java.util.*;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.affectations.Affectation;
+import com.carteur.gestionprs.legions.Legion;
 import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "GROUPEMENT")
@@ -18,12 +21,13 @@ public class Groupement {
     private String nom;
     private String pseudo;
     
-    @ManyToMany
-    @JoinTable(name = "AFFECTATION", joinColumns = {
-            @JoinColumn(name = "groupement_id")
-    }, inverseJoinColumns = @JoinColumn(name = "user_id"))
-    private Set<User> userGroupements;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "legion_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Legion legion;
 
+    @OneToMany(mappedBy = "groupement", cascade = CascadeType.ALL)
+    private Set<Affectation> affectations = new HashSet<>();
 
     public Groupement() {
         super();
@@ -112,6 +116,21 @@ public class Groupement {
      */
     public void setUserGroupements(Set<User> userGroupements) {
         this.userGroupements = userGroupements;
+    }
+
+
+    /**
+     * @return Set<Legion> return the legions
+     */
+    public Set<Legion> getLegions() {
+        return legions;
+    }
+
+    /**
+     * @param legions the legions to set
+     */
+    public void setLegions(Set<Legion> legions) {
+        this.legions = legions;
     }
 
 }

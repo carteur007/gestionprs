@@ -21,13 +21,12 @@ public class Formation {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private User userFormation;
+    private User user;
 
     public Formation() {
         super();
     }  
     
-
     /**
      * @return long return the id
      */
@@ -124,6 +123,21 @@ public class Formation {
      */
     public void setCorpsFormation(String corpsFormation) {
         this.corpsFormation = corpsFormation;
+    }
+
+
+    /**
+     * @return User return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }

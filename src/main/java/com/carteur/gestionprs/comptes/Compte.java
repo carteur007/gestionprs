@@ -18,7 +18,7 @@ public class Compte {
     @OneToOne
     @JoinColumn(name = "user_id")
     @MapsId
-    private User userCompte;
+    private User user;
 
     public Compte(String matricule, String motPasse, String telephone, String fonction) {
         this.matricule = matricule;
@@ -109,6 +109,21 @@ public class Compte {
      */
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+
+    /**
+     * @return User return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }

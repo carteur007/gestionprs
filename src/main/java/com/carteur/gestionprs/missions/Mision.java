@@ -1,10 +1,10 @@
 package com.carteur.gestionprs.missions;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
 
-import com.carteur.gestionprs.users.User;
 
 @Entity
 public class Mision {
@@ -18,17 +18,12 @@ public class Mision {
     private String dateFin;
     private String dateModification;
 
-    @ManyToMany
-    @JoinTable(name = "USER_MISSION_MISIONS", joinColumns = {
-            @JoinColumn(name = "mision_id")
-    }, inverseJoinColumns = @JoinColumn(name = "user_id"))
-    private Set<User> userMissions;
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
+    private Set<MisionsUser> usermissions = new HashSet<>();
 
     public Mision() {
         super();
     }
-    
-
     /**
      * @return long return the id
      */
@@ -125,6 +120,21 @@ public class Mision {
      */
     public void setDateModification(String dateModification) {
         this.dateModification = dateModification;
+    }
+
+
+    /**
+     * @return Set<MisionsUser> return the usermissions
+     */
+    public Set<MisionsUser> getUsermissions() {
+        return usermissions;
+    }
+
+    /**
+     * @param usermissions the usermissions to set
+     */
+    public void setUsermissions(Set<MisionsUser> usermissions) {
+        this.usermissions = usermissions;
     }
 
 }

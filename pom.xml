@@ -60,6 +60,9 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<compilerArguments>
+                    	<Xlint:unchecked/>
+                	</compilerArguments>
 				</configuration>
 			</plugin>
 

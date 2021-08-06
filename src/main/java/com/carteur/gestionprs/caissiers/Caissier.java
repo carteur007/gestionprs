@@ -27,7 +27,7 @@ public class Caissier {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private User userCaissier;
+    private User user;
 
     /**
      * @return long return the id
@@ -111,6 +111,21 @@ public class Caissier {
      */
     public void setTypeFacture(String typeFacture) {
         this.typeFacture = typeFacture;
+    }
+
+
+    /**
+     * @return User return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }

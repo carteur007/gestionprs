@@ -1,6 +1,12 @@
 package com.carteur.gestionprs.legions;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
+
+import com.carteur.gestionprs.groupements.Groupement;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Legion {
@@ -11,6 +17,9 @@ public class Legion {
     private String ville;
     private String nom;
     private String origine;
+
+    @OneToMany(mappedBy = "legion", cascade = CascadeType.ALL)
+    private Set<Groupement> groupements = new HashSet<>();
 
     public Legion() {
         super();

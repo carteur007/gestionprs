@@ -32,10 +32,8 @@ public class UserController {
 
             if(matricule == null)
                 userRepository.findAll().forEach(users::add);
-            else{
-                //userRepository.findAll().forEach(users::add);
+            else
                 userRepository.findByMatriculeContaining(matricule).forEach(users::add);
-            }
             if(users.isEmpty()){
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
@@ -68,11 +66,14 @@ public class UserController {
     @PostMapping("/users")
 	public ResponseEntity<User> createUser(@RequestBody User user) {
 		try {
+            User _user = userRepository.save(user);
+            /*
 			User _user = userRepository.save(new User(
                 user.getNom(), user.getPrenom(), user.getNomMere(),
                 user.getNomPere(), user.getEmail(),user.getMatricule(), user.getTelephone(),
                 user.getLieuNaissance(), user.getDateNaissance(), user.getDateEntree(),
                 user.getCentreFormation(), user.getRegion(),user.getArrondissement()));
+                */
 			return new ResponseEntity<>(_user, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -89,7 +90,8 @@ public class UserController {
 		Optional<User> userData = userRepository.findById(id);
 
 		if (userData.isPresent()) {
-			User _user = userData.get();
+            /*
+			User _user = new User();
 			_user.setNom(user.getNom());
 			_user.setPrenom(user.getPrenom());
 			_user.setNomMere(user.getNomMere());
@@ -102,7 +104,8 @@ public class UserController {
             _user.setDateEntree(user.getDateEntree());
             _user.setDateNaissance(user.getDateNaissance());
             _user.setTelephone(user.getTelephone());
-			return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+            */
+			return new ResponseEntity<>(userRepository.save(user), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
@@ -115,7 +118,7 @@ public class UserController {
 	public ResponseEntity<HttpStatus> deleteAllUsers() {
 		try {
 			userRepository.deleteAll();
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			return new ResponseEntity<>(HttpStatus.GONE);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -124,7 +127,7 @@ public class UserController {
 	public ResponseEntity<User> deleteOneUser(@PathVariable("id") long id) {
         try {
             userRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.GONE);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
