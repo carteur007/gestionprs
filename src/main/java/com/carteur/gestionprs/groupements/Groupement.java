@@ -104,33 +104,19 @@ public class Groupement {
     }
 
 
-    /**
-     * @return Set<User> return the userGroupements
-     */
-    public Set<User> getUserGroupements() {
-        return userGroupements;
+    public Legion getLegion() {
+        return legion;
     }
 
-    /**
-     * @param userGroupements the userGroupements to set
-     */
-    public void setUserGroupements(Set<User> userGroupements) {
-        this.userGroupements = userGroupements;
+    public void setLegion(Legion legion) {
+        this.legion = legion;
     }
 
-
-    /**
-     * @return Set<Legion> return the legions
-     */
-    public Set<Legion> getLegions() {
-        return legions;
+    public Set<Affectation> getAffectations() {
+        return affectations;
     }
 
-    /**
-     * @param legions the legions to set
-     */
-    public void setLegions(Set<Legion> legions) {
-        this.legions = legions;
+    public void setAffectations(Set<Affectation> affectations) {
+        this.affectations = affectations;
     }
-
 }

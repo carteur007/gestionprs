@@ -41,7 +41,7 @@ public class CompteController {
             } 
             return new ResponseEntity<>(compteList,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<Compte>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**
