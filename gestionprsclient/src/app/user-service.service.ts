@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { User } from './user';
 
 @Injectable({
@@ -9,22 +9,22 @@ import { User } from './user';
 export class UserServiceService {
   private usersUrl: string;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
     this.usersUrl = 'http://localhost:8080/users';
   }
   /**
    * findAll
-    * @returns 
+    * @returns
     */
   public findAll(): Observable<User[]>{
     return this.http.get<User[]>(this.usersUrl);
   }
   /**
-   * 
-   * @param user 
-   * @returns 
+   *
+   * @param user
+   * @returns
    */
-  public save(user: User) {
+  public save(user:any) {
     return this.http.post<User>(this.usersUrl, user);
   }
 
