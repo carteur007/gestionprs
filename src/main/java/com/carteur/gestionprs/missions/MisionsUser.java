@@ -3,6 +3,7 @@ package com.carteur.gestionprs.missions;
 import javax.persistence.Entity;
 
 import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
@@ -16,12 +17,14 @@ public class MisionsUser {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("u-mu")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "mission_id")
+    @JoinColumn(name = "mision_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private Mision mission;
+    @JsonBackReference("m-mu")
+    private Mision mision;
     /**
      * @param id the id to set
      */
@@ -50,17 +53,17 @@ public class MisionsUser {
     }
 
     /**
-     * @return Mision return the mission
+     * @return Mision return the mision
      */
-    public Mision getMission() {
-        return mission;
+    public Mision getMision() {
+        return mision;
     }
 
     /**
-     * @param mission the mission to set
+     * @param mision the mission to set
      */
-    public void setMission(Mision mission) {
-        this.mission = mission;
+    public void setMission(Mision mision) {
+        this.mision = mision;
     }
 
 }

@@ -10,6 +10,7 @@ import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.formations.Formation;
 import com.carteur.gestionprs.grades.Grade;
 import com.carteur.gestionprs.missions.MisionsUser;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 @Entity
@@ -46,24 +47,30 @@ public class User {
     @Column(name = "arrondissement")
     private  String arrondissement;  
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @PrimaryKeyJoinColumn
+    @JsonManagedReference("u-cm")
     private Compte compte;
 
+    @JsonManagedReference("u-g")
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Grade> grades = new HashSet<>();
+    private List<Grade> grades = new ArrayList<>();
 
+    @JsonManagedReference("u-ca")
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Caissier> caissiers = new HashSet<>();
+    private List<Caissier> caissiers = new ArrayList<>();
 
+    @JsonManagedReference("u-f")
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Formation> formations = new HashSet<>();
+    private List<Formation> formations = new ArrayList<>();
 
+    @JsonManagedReference("u-mu")
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<MisionsUser> usermissions = new HashSet<>();
+    private List<MisionsUser> usermissions = new ArrayList<>();
 
+    @JsonManagedReference("u-a")
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Affectation> affectations = new HashSet<>();
+    private List<Affectation> affectations = new ArrayList<>();
 
     public User() {
         super();
@@ -82,7 +89,7 @@ public class User {
     }
 
     /**
-     * @param id the id to set
+     * @param id the id to List
      */
     public void setId(long id) {
         this.id = id;
@@ -96,7 +103,7 @@ public class User {
     }
 
     /**
-     * @param nom the nom to set
+     * @param nom the nom to List
      */
     public void setNom(String nom) {
         this.nom = nom;
@@ -110,7 +117,7 @@ public class User {
     }
 
     /**
-     * @param prenom the prenom to set
+     * @param prenom the prenom to List
      */
     public void setPrenom(String prenom) {
         this.prenom = prenom;
@@ -124,7 +131,7 @@ public class User {
     }
 
     /**
-     * @param nomMere the nomMere to set
+     * @param nomMere the nomMere to List
      */
     public void setNomMere(String nomMere) {
         this.nomMere = nomMere;
@@ -138,7 +145,7 @@ public class User {
     }
 
     /**
-     * @param nomPere the nomPere to set
+     * @param nomPere the nomPere to List
      */
     public void setNomPere(String nomPere) {
         this.nomPere = nomPere;
@@ -152,7 +159,7 @@ public class User {
     }
 
     /**
-     * @param email the email to set
+     * @param email the email to List
      */
     public void setEmail(String email) {
         this.email = email;
@@ -166,7 +173,7 @@ public class User {
     }
 
     /**
-     * @param matricule the matricule to set
+     * @param matricule the matricule to List
      */
     public void setMatricule(String matricule) {
         this.matricule = matricule;
@@ -180,7 +187,7 @@ public class User {
     }
 
     /**
-     * @param telephone the telephone to set
+     * @param telephone the telephone to List
      */
     public void setTelephone(String telephone) {
         this.telephone = telephone;
@@ -194,7 +201,7 @@ public class User {
     }
 
     /**
-     * @param lieuNaissance the lieuNaissance to set
+     * @param lieuNaissance the lieuNaissance to List
      */
     public void setLieuNaissance(String lieuNaissance) {
         this.lieuNaissance = lieuNaissance;
@@ -208,7 +215,7 @@ public class User {
     }
 
     /**
-     * @param dateNaissance the dateNaissance to set
+     * @param dateNaissance the dateNaissance to List
      */
     public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
@@ -222,7 +229,7 @@ public class User {
     }
 
     /**
-     * @param dateEntree the dateEntree to set
+     * @param dateEntree the dateEntree to List
      */
     public void setDateEntree(String dateEntree) {
         this.dateEntree = dateEntree;
@@ -236,7 +243,7 @@ public class User {
     }
 
     /**
-     * @param centreFormation the centreFormation to set
+     * @param centreFormation the centreFormation to List
      */
     public void setCentreFormation(String centreFormation) {
         this.centreFormation = centreFormation;
@@ -250,7 +257,7 @@ public class User {
     }
 
     /**
-     * @param region the region to set
+     * @param region the region to List
      */
     public void setRegion(String region) {
         this.region = region;
@@ -264,7 +271,7 @@ public class User {
     }
 
     /**
-     * @param arrondissement the arrondissement to set
+     * @param arrondissement the arrondissement to List
      */
     public void setArrondissement(String arrondissement) {
         this.arrondissement = arrondissement;
@@ -279,78 +286,78 @@ public class User {
     }
 
     /**
-     * @param compte the compte to set
+     * @param compte the compte to List
      */
     public void setCompte(Compte compte) {
         this.compte = compte;
     }
 
     /**
-     * @return Set<Grade> return the grades
+     * @return List<Grade> return the grades
      */
-    public Set<Grade> getGrades() {
+    public List<Grade> getGrades() {
         return grades;
     }
 
     /**
-     * @param grades the grades to set
+     * @param grades the grades to List
      */
-    public void setGrades(Set<Grade> grades) {
+    public void setGrades(List<Grade> grades) {
         this.grades = grades;
     }
 
     /**
-     * @return Set<Caissier> return the caissiers
+     * @return List<Caissier> return the caissiers
      */
-    public Set<Caissier> getCaissiers() {
+    public List<Caissier> getCaissiers() {
         return caissiers;
     }
 
     /**
-     * @param caissiers the caissiers to set
+     * @param caissiers the caissiers to List
      */
-    public void setCaissiers(Set<Caissier> caissiers) {
+    public void setCaissiers(List<Caissier> caissiers) {
         this.caissiers = caissiers;
     }
 
     /**
-     * @return Set<Formation> return the formations
+     * @return List<Formation> return the formations
      */
-    public Set<Formation> getFormations() {
+    public List<Formation> getFormations() {
         return formations;
     }
 
     /**
-     * @param formations the formations to set
+     * @param formations the formations to List
      */
-    public void setFormations(Set<Formation> formations) {
+    public void setFormations(List<Formation> formations) {
         this.formations = formations;
     }
     /**
-     * @return Set<MisionsUser> return the usermissions
+     * @return List<MisionsUser> return the usermissions
      */
-    public Set<MisionsUser> getUsermissions() {
+    public List<MisionsUser> getUsermissions() {
         return usermissions;
     }
 
     /**
-     * @param usermissions the usermissions to set
+     * @param usermissions the usermissions to List
      */
-    public void setUsermissions(Set<MisionsUser> usermissions) {
+    public void setUsermissions(List<MisionsUser> usermissions) {
         this.usermissions = usermissions;
     }
 
     /**
-     * @return Set<Affectation> return the affectations
+     * @return List<Affectation> return the affectations
      */
-    public Set<Affectation> getAffectations() {
+    public List<Affectation> getAffectations() {
         return affectations;
     }
 
     /**
-     * @param affectations the affectations to set
+     * @param affectations the affectations to List
      */
-    public void setAffectations(Set<Affectation> affectations) {
+    public void setAffectations(List<Affectation> affectations) {
         this.affectations = affectations;
     }
 

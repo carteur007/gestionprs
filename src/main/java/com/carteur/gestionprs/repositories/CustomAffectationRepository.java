@@ -1,10 +1,13 @@
 package com.carteur.gestionprs.repositories;
 
+import java.util.List;
+
 import com.carteur.gestionprs.affectations.Affectation;
 
-
 public interface CustomAffectationRepository {
-    //Iterable<Affectation> findAffectationByIdUser(long id_user);
-    //Iterable<Affectation> findAffectationByIdGroupement(long id_user);
-    ///Iterable<Affectation> findAffectationByIdGroupementAndUser(long id_group, long id_user);
+    
+    public List<Affectation> findAffectationByUserId(long id_user);
+    public List<Affectation> findAffectationByGroupementId(long id_user);
+    public List<Affectation> findAffectationByGroupementIdAndUserId(long id_group, long id_user);
+    
 }

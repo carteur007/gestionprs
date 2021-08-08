@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 import com.carteur.gestionprs.groupements.Groupement;
 import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -20,11 +21,13 @@ public class Affectation {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")    
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("u-a")
     private User user;
     
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "groupement_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("g-a")
     private Groupement groupement;
 
     public String getCode() {

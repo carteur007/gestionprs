@@ -1,12 +1,13 @@
 package com.carteur.gestionprs.controllers;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import com.carteur.gestionprs.legions.Legion;
 import com.carteur.gestionprs.repositories.LegionRepository;
-
+import com.carteur.gestionprs.repositories.GroupementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,15 +20,22 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
 public class LegionController {
     
-    @Autowired
-    LegionRepository legionRepository;
+    private final LegionRepository legionRepository;
+    private final GroupementRepository groupementRepository;
 
+    @Autowired
+    public LegionController(LegionRepository legionRepository, GroupementRepository groupementRepository) {
+        this.legionRepository = legionRepository;
+        this.groupementRepository = groupementRepository;
+    }
     /**
      * Recherche les legions
      * @return
@@ -69,7 +77,8 @@ public class LegionController {
     public ResponseEntity<Legion> createLegion(@RequestBody Legion legion ) {
         try {
             Legion _legion = legionRepository.save(legion);
-            return new ResponseEntity<>(_legion, HttpStatus.CREATED);
+            URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(_legion.getId()).toUri();
+            return ResponseEntity.created(location).body(_legion);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -85,24 +94,12 @@ public class LegionController {
         try {
             Optional<Legion> legionData = legionRepository.findById(id);
             if(legionData.isPresent()){
+                legion.setId(legionData.get().getId());
+                legion.setGroupements(legionData.get().getGroupements());
                 return new ResponseEntity<>(legionRepository.save(legion), HttpStatus.OK);
             }else{
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-    }
-    /**
-     * Suppression d'une Legion
-     * @param id
-     * @return
-     */
-    @DeleteMapping(value="/legions/{id}")
-    public ResponseEntity<List<Legion>> deleteLegionById(@PathVariable("id") long id) {
-        try {
-            legionRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.GONE);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -119,5 +116,28 @@ public class LegionController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+    }
+    /**
+     * Suppression complete d'une Legion
+     * @param id
+     * @return
+     */
+    @DeleteMapping(value="/legions/{id}")
+    public ResponseEntity<List<Legion>> deleteLegionById(@PathVariable("id") long id) {
+        try {
+            Optional<Legion> legionData = legionRepository.findById(id);
+            if (!legionData.isPresent()) {
+                return ResponseEntity.unprocessableEntity().build();
+		    } 
+            deleteGroupementInTransaction(legionData.get());
+            legionRepository.delete(legionData.get());
+            return ResponseEntity.noContent().build();
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+    }
+    @Transactional
+    public void deleteGroupementInTransaction(Legion legion) {
+        groupementRepository.deleteByLegionId(legion.getId());
     }
 }

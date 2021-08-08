@@ -1,8 +1,8 @@
 package com.carteur.gestionprs.controllers;
 
-import java.util.ArrayList;
-
 import com.carteur.gestionprs.affectations.Affectation;
+import com.carteur.gestionprs.groupements.Groupement;
+import com.carteur.gestionprs.users.User;
 import com.carteur.gestionprs.repositories.AffectationRepository;
 import com.carteur.gestionprs.repositories.GroupementRepository;
 import com.carteur.gestionprs.repositories.UserRepository;
@@ -10,30 +10,32 @@ import com.carteur.gestionprs.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.*;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import java.net.URI;
 
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
 public class AffectationController {
-    
+
+    private final UserRepository userRepository;
+    private final GroupementRepository groupementRepository;
+    private final AffectationRepository affectationRepository;
+
     @Autowired
-    UserRepository userRepository;
-    @Autowired
-    AffectationRepository affectationRepository;
-    @Autowired
-    GroupementRepository groupementRepository ;
+    public AffectationController(
+        UserRepository userRepository, 
+        GroupementRepository groupementRepository,
+        AffectationRepository affectationRepository
+    ){
+        this.userRepository = userRepository;
+        this.groupementRepository = groupementRepository;
+        this.affectationRepository = affectationRepository;
+    }
     /**
      * Recherche les affectations
      * @return
@@ -59,23 +61,34 @@ public class AffectationController {
     @GetMapping("/affectations/{id}")
 	public ResponseEntity<Affectation> getAffectationById(@PathVariable("id") long id) {
         Optional<Affectation> affectationData = affectationRepository.findById(id);
-
-		if (affectationData.isPresent()) {
-			return new ResponseEntity<>(affectationData.get(), HttpStatus.OK);
-		} else {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
+		if (!affectationData.isPresent()) {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+		return new ResponseEntity<>(affectationData.get(), HttpStatus.OK);
     }
     /**
      * Creation d'une affectation
      * @param affect
      * @return
      */
-    @PostMapping(value="/affectations")
-    public ResponseEntity<Affectation> createAffectation(@RequestBody Affectation affect ) {
+    @PostMapping(value="/affectations/{userId}/{groupementId}/create")
+    public ResponseEntity<Affectation> createAffectation(
+            @RequestBody Affectation affect, 
+            @PathVariable("userId") long userId,
+            @PathVariable("groupementId") long groupementId
+            ) {
         try {
+            Optional<User>  _user = userRepository.findById(userId);
+            Optional<Groupement>  _groupement = groupementRepository.findById(groupementId);
+            if(!_user.isPresent() && !_groupement.isPresent()){
+                return ResponseEntity.unprocessableEntity().build();
+            }
+            affect.setUser(_user.get());
+            affect.setGroupement(_groupement.get());
             Affectation _affect = affectationRepository.save(affect);
-            return new ResponseEntity<>(_affect, HttpStatus.CREATED);
+            URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{[id}")
+            .buildAndExpand(_affect.getId()).toUri();
+            return ResponseEntity.created(location).body(_affect);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -91,10 +104,10 @@ public class AffectationController {
         try {
             Optional<Affectation> affectData = affectationRepository.findById(id);
             if(affectData.isPresent()){
-                return new ResponseEntity<>(affectationRepository.save(affect), HttpStatus.OK);
-            }else{
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                return ResponseEntity.unprocessableEntity().build();
             }
+            affect.setId(affectData.get().getId());
+            return new ResponseEntity<>(affectationRepository.save(affect), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}

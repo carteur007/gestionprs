@@ -7,7 +7,8 @@ import javax.persistence.*;
 
 import com.carteur.gestionprs.affectations.Affectation;
 import com.carteur.gestionprs.legions.Legion;
-import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -24,10 +25,12 @@ public class Groupement {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "legion_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("l-g")
     private Legion legion;
 
+    @JsonManagedReference("g-a")
     @OneToMany(mappedBy = "groupement", cascade = CascadeType.ALL)
-    private Set<Affectation> affectations = new HashSet<>();
+    private List<Affectation> affectations = new ArrayList<>();
 
     public Groupement() {
         super();
@@ -41,7 +44,7 @@ public class Groupement {
     }
 
     /**
-     * @param id the id to set
+     * @param id the id to List
      */
     public void setId(long id) {
         this.id = id;
@@ -55,7 +58,7 @@ public class Groupement {
     }
 
     /**
-     * @param code the code to set
+     * @param code the code to List
      */
     public void setCode(String code) {
         this.code = code;
@@ -69,7 +72,7 @@ public class Groupement {
     }
 
     /**
-     * @param ville the ville to set
+     * @param ville the ville to List
      */
     public void setVille(String ville) {
         this.ville = ville;
@@ -83,7 +86,7 @@ public class Groupement {
     }
 
     /**
-     * @param nom the nom to set
+     * @param nom the nom to List
      */
     public void setNom(String nom) {
         this.nom = nom;
@@ -97,7 +100,7 @@ public class Groupement {
     }
 
     /**
-     * @param pseudo the pseudo to set
+     * @param pseudo the pseudo to List
      */
     public void setPseudo(String pseudo) {
         this.pseudo = pseudo;
@@ -105,32 +108,31 @@ public class Groupement {
 
 
     /**
-     * @return Set<User> return the userGroupements
+     * @return Legion return the legion
      */
-    public Set<User> getUserGroupements() {
-        return userGroupements;
+    public Legion getLegion() {
+        return legion;
     }
 
     /**
-     * @param userGroupements the userGroupements to set
+     * @param legion the legion to List
      */
-    public void setUserGroupements(Set<User> userGroupements) {
-        this.userGroupements = userGroupements;
-    }
-
-
-    /**
-     * @return Set<Legion> return the legions
-     */
-    public Set<Legion> getLegions() {
-        return legions;
+    public void setLegion(Legion legion) {
+        this.legion = legion;
     }
 
     /**
-     * @param legions the legions to set
+     * @return List<Affectation> return the affectations
      */
-    public void setLegions(Set<Legion> legions) {
-        this.legions = legions;
+    public List<Affectation> getAffectations() {
+        return affectations;
+    }
+
+    /**
+     * @param affectations the affectations to List
+     */
+    public void setAffectations(List<Affectation> affectations) {
+        this.affectations = affectations;
     }
 
 }
