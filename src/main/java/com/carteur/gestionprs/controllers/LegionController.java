@@ -50,7 +50,7 @@ public class LegionController {
             } 
             return new ResponseEntity<>(legionList,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<Legion>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**

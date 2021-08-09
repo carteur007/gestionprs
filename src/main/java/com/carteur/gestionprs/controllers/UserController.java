@@ -66,7 +66,7 @@ public class UserController {
             }
             return new ResponseEntity<>(users,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<User>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**
@@ -95,7 +95,7 @@ public class UserController {
             .buildAndExpand(_user.getId()).toUri();
             return ResponseEntity.created(location).body(_user);
 		} catch (Exception e) {
-            return ResponseEntity.internalServerError().body(null);
+            return ResponseEntity.internalServerError().body((User) null);
 		}
 	}
     /**

@@ -120,9 +120,8 @@ public class Groupement {
     public void setLegion(Legion legion) {
         this.legion = legion;
     }
-
-    /**
-     * @return List<Affectation> return the affectations
+    /*
+     * @return List<Affectation>
      */
     public List<Affectation> getAffectations() {
         return affectations;
@@ -134,5 +133,4 @@ public class Groupement {
     public void setAffectations(List<Affectation> affectations) {
         this.affectations = affectations;
     }
-
 }

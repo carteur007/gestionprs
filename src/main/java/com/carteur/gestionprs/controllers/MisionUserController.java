@@ -56,7 +56,7 @@ public class MisionUserController {
             } 
             return new ResponseEntity<>(misionList,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<MisionsUser>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**

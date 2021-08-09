@@ -50,7 +50,7 @@ public class AffectationController {
             } 
             return new ResponseEntity<>(affecList,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<Affectation>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**

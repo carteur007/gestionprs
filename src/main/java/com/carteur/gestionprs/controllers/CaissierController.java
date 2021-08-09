@@ -54,7 +54,7 @@ public class CaissierController {
             } 
             return new ResponseEntity<>(caissierList,HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>((List<Caissier>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     /**
