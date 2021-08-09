@@ -6,15 +6,18 @@
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/comptes/Compte.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/AffectationController.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/FormationController.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/CustomMisionUserRepositoryImple.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/GradeRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/MisionUserController.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/GestionprsApplication.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/MisionRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/uploads/FileUploadUtil.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/CustomAffectationRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/ImplAffectationRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/AffectationRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/CompteRepository.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/CustomMisionUserRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/controllers/GradeController.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/missions/Mision.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/grades/Grade.java
@@ -28,6 +31,7 @@
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/affectations/Affectation.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/CaissierRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/MisionUserRepository.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/uploads/UploadPhotoService.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/LegionRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/missions/MisionsUser.java
