@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {UserServiceService} from "../../user-service.service";
 import {Router} from "@angular/router";
+import {isEmpty} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-add-user',
@@ -16,7 +17,7 @@ export class AddUserComponent implements OnInit {
   communes: string[] = [];
   centres: string[] = [];
   uploadedFile: any ={};
-  message: string ='';
+  message: any ;
 
   constructor(private userService: UserServiceService, private router: Router) { }
 
@@ -39,8 +40,8 @@ export class AddUserComponent implements OnInit {
         email: new FormControl(''),
         matricule: new FormControl(''),
         telephone: new FormControl(''),
-        province: new FormControl(''),
-        commune: new FormControl(''),
+        region: new FormControl(''),
+        arrondissement: new FormControl(''),
         dateNaissance: new FormControl(null),
         dateEntree: new FormControl(null),
         centreFormation: new FormControl(''),
@@ -51,7 +52,7 @@ export class AddUserComponent implements OnInit {
     );
   }
 
-  onFilesSelect(event:any) {
+  onFilesSelect(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       console.log(file.name);
@@ -85,23 +86,37 @@ export class AddUserComponent implements OnInit {
     formData.append('email',this.form.get('email').value);
     formData.append('matricule',this.form.get('matricule').value);
     formData.append('telephone',this.form.get('telephone').value);
-    formData.append('province',this.form.get('province').value);
-    formData.append('commune',this.form.get('commune').value);
+    formData.append('region',this.form.get('region').value);
+    formData.append('arrondissement',this.form.get('arrondissement').value);
     formData.append('dateNaissance',this.form.get('dateNaissance').value);
     formData.append('dateEntree',this.form.get('dateEntree').value);
     formData.append('centreFormation',this.form.get('centreFormation').value);
     formData.append('statusMatrimoniale',this.form.get('statusMatrimoniale').value);
     formData.append('file',this.uploadedFile);
+    console.log(this.uploadedFile);
+    /*if(this.isEmpty(this.uploadedFile)){
+      this.message = 'Empty file, please upload image file and try again';
+    }else {*/
     console.log(formData);
     this.userService.save(formData).subscribe(
       data =>{
         console.log(data);
+        this.router.navigateByUrl('users/users');
 
       },
       error => {
         console.log(error);
       }
     );
+    //}
+  }
+
+  isEmpty(obj: any) {
+    for(var key in obj) {
+      if(obj.hasOwnProperty(key))
+        return false;
+    }
+    return true;
   }
 
 }

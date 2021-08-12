@@ -36,15 +36,17 @@ public class User {
     @Column(name = "lieuNaissance")
     private  String lieuNaissance;
     @Column(name = "dateNaissance")
-    private  String dateNaissance;
+    private  Date dateNaissance;
     @Column(name = "dateEntree")
-    private  String dateEntree;
+    private  Date dateEntree;
     @Column(name = "centreFormation")
     private  String centreFormation;
     @Column(name = "region")
     private  String region;
     @Column(name = "arrondissement")
-    private  String arrondissement;  
+    private  String arrondissement;
+
+    private String profile;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @PrimaryKeyJoinColumn
@@ -203,28 +205,28 @@ public class User {
     /**
      * @return String return the dateNaissance
      */
-    public String getDateNaissance() {
+    public Date getDateNaissance() {
         return dateNaissance;
     }
 
     /**
      * @param dateNaissance the dateNaissance to set
      */
-    public void setDateNaissance(String dateNaissance) {
+    public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
     /**
      * @return String return the dateEntree
      */
-    public String getDateEntree() {
+    public Date getDateEntree() {
         return dateEntree;
     }
 
     /**
      * @param dateEntree the dateEntree to set
      */
-    public void setDateEntree(String dateEntree) {
+    public void setDateEntree(Date dateEntree) {
         this.dateEntree = dateEntree;
     }
 
@@ -354,4 +356,11 @@ public class User {
         this.affectations = affectations;
     }
 
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
 }

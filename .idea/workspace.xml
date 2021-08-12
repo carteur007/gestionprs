@@ -2,57 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4c5df84-8f68-4d3f-b078-3e79a2215ad8" name="Default Changelist" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserHelper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/app.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/app.component.html" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/node_modules/.package-lock.json" afterPath="$PROJECT_DIR$/gestionprsclient/node_modules/.package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/node_modules/__ngcc_entry_points__.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/package-lock.json" afterPath="$PROJECT_DIR$/gestionprsclient/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/package.json" afterPath="$PROJECT_DIR$/gestionprsclient/package.json" />
       <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/index.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/GestionprsApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/GestionprsApplication.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/AffectationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/AffectationController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CaissierController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CaissierController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CompteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CompteController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/FormationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/FormationController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GradeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GradeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/LegionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/LegionController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/MisionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/MisionController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/MisionUserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/MisionUserController.java" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user.ts" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.ts" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/groupements/Groupement.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/groupements/Groupement.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/GestionprsApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/affectations/Affectation.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/affectations/Affectation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/caissiers/Caissier.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/caissiers/Caissier.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/comptes/Compte.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/comptes/Compte.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/AffectationController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/AffectationController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/CaissierController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/CaissierController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/CompteController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/CompteController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/FormationController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/FormationController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/GradeController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/GradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/GroupementController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/GroupementController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/LegionController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/LegionController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/MisionController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/MisionController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/MisionUserController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/MisionUserController.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/controllers/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/formations/Formation.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/formations/Formation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/grades/Grade.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/grades/Grade.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/groupements/Groupement.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/groupements/Groupement.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/legions/Legion.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/legions/Legion.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/missions/Mision.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/missions/Mision.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/missions/MisionsUser.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/missions/MisionsUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/AffectationRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/AffectationRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CaissierRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CaissierRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CompteRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CompteRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CustomAffectationRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/CustomAffectationRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/FormationRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/FormationRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/GradeRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/GradeRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/GroupementRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/GroupementRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/ImplAffectationRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/ImplAffectationRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/LegionRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/LegionRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/MisionRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/MisionRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/MisionUserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/MisionUserRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/repositories/UserRepository.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/users/User.class" afterPath="$PROJECT_DIR$/target/classes/com/carteur/gestionprs/users/User.class" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,55 +49,47 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="78" column="75" lean-forward="false" selection-start-line="78" selection-start-column="75" selection-end-line="78" selection-end-column="75" />
+            <state relative-caret-position="75">
+              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestionprsApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/GestionprsApplication.java">
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/sidebar/sidebar.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/sidebar/sidebar.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="-124">
+              <caret line="29" column="85" lean-forward="false" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="85" />
+              <folding>
+                <element signature="e#2948#3812#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,58 +97,131 @@
       <file leaf-file-name="footer.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-              <folding>
-                <element signature="e#214#220#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompteController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CompteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-256">
-              <caret line="43" column="76" lean-forward="false" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+            <state relative-caret-position="67">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="argon.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/assets/css/argon.min.css">
+      <file leaf-file-name="add-user.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="16" column="205980" lean-forward="false" selection-start-line="16" selection-start-column="205980" selection-end-line="16" selection-end-column="205980" />
+            <state relative-caret-position="233">
+              <caret line="110" column="6" lean-forward="false" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/header/header.component.html">
+      <file leaf-file-name="add-user.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3510">
-              <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
+                <element signature="e#1370#1371#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
+                <element signature="e#1544#1545#0" expanded="true" />
+                <element signature="e#1580#1581#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#1762#1763#0" expanded="true" />
+                <element signature="e#1792#1793#0" expanded="true" />
+                <element signature="e#1838#1839#0" expanded="true" />
+                <element signature="e#1876#1877#0" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1936#1937#0" expanded="true" />
+                <element signature="e#1978#1979#0" expanded="true" />
+                <element signature="e#2012#2013#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#2080#2081#0" expanded="true" />
+                <element signature="e#2130#2131#0" expanded="true" />
+                <element signature="e#2172#2173#0" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
+                <element signature="e#2240#2241#0" expanded="true" />
+                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2332#2333#0" expanded="true" />
+                <element signature="e#2372#2373#0" expanded="true" />
+                <element signature="e#2408#2409#0" expanded="true" />
+                <element signature="e#2466#2467#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2590#2591#0" expanded="true" />
+                <element signature="e#2646#2647#0" expanded="true" />
+                <element signature="e#2696#2697#0" expanded="true" />
+                <element signature="e#2731#2732#0" expanded="true" />
+                <element signature="e#2764#2765#0" expanded="true" />
+                <element signature="e#2814#2815#0" expanded="true" />
+                <element signature="e#2858#2859#0" expanded="true" />
+                <element signature="e#2900#2901#0" expanded="true" />
+                <element signature="e#2938#2939#0" expanded="true" />
+                <element signature="e#3000#3001#0" expanded="true" />
+                <element signature="e#3054#3055#0" expanded="true" />
+                <element signature="e#3087#3088#0" expanded="true" />
+                <element signature="e#3116#3117#0" expanded="true" />
+                <element signature="e#3160#3161#0" expanded="true" />
+                <element signature="e#3196#3197#0" expanded="true" />
+                <element signature="e#3237#3238#0" expanded="true" />
+                <element signature="e#3274#3275#0" expanded="true" />
+                <element signature="e#3334#3335#0" expanded="true" />
+                <element signature="e#3386#3387#0" expanded="true" />
+                <element signature="e#3424#3425#0" expanded="true" />
+                <element signature="e#3451#3452#0" expanded="true" />
+                <element signature="e#3498#3499#0" expanded="true" />
+                <element signature="e#3530#3531#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-service.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -193,6 +230,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -202,11 +244,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" />
         <option value="$PROJECT_DIR$/gestionprsclient/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/groupements/Groupement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/AffectationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CaissierController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/CompteController.java" />
@@ -220,8 +260,23 @@
         <option value="$PROJECT_DIR$/gestionprsclient/src/assets/css/argon.min.css" />
         <option value="$PROJECT_DIR$/gestionprsclient/src/index.html" />
         <option value="$PROJECT_DIR$/gestionprsclient/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html" />
         <option value="$PROJECT_DIR$/gestionprsclient/src/app/sidebar/sidebar.component.html" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user/add-users/add-users.component.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserService.java" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user.ts" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts" />
+        <option value="$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java" />
       </list>
     </option>
   </component>
@@ -256,9 +311,10 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/gestionprsclient/node_modules" />
+    <handled-path value="$PROJECT_DIR$/gestionprsclient/src/assets/vendor/gulp-copy/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
+    <option name="x" value="20" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="676" />
@@ -280,7 +336,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +385,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="sidebar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gestionprs" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionprsclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gestionprs" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionprsclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="add-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gestionprs" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionprsclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
@@ -414,7 +496,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gestionprs" type="462c0819:PsiDirectoryNode" />
-              <item name="groupements" type="462c0819:PsiDirectoryNode" />
+              <item name="missions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
@@ -423,7 +505,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gestionprs" type="462c0819:PsiDirectoryNode" />
-              <item name="missions" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gestionprs" type="b2602c69:ProjectViewProjectNode" />
@@ -445,8 +527,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -504,48 +586,51 @@
       <option name="presentableId" value="Default" />
       <updated>1627981718572</updated>
       <workItem from="1627981735287" duration="1535000" />
-      <workItem from="1628020404337" duration="14987000" />
+      <workItem from="1628020404337" duration="32135000" />
+      <workItem from="1628329434117" duration="231000" />
+      <workItem from="1628771507056" duration="8345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14987000" />
+    <option name="totallyTimeSpent" value="40711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="23" width="1260" height="676" extended-state="0" />
+    <frame x="20" y="23" width="1260" height="676" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922825" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25779969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,28 +645,107 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="29" y="145" width="732" height="644" key="#Inspections" timestamp="1627982935496">
-      <screen x="0" y="27" width="1600" height="873" />
-    </state>
-    <state x="29" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1627982935496" />
-    <state x="269" y="332" width="251" height="270" key="#Notifications" timestamp="1627981769683">
-      <screen x="0" y="27" width="1600" height="873" />
-    </state>
-    <state x="269" y="332" width="251" height="270" key="#Notifications/0.27.1600.873@0.27.1600.873" timestamp="1627981769683" />
-    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1627982822830">
-      <screen x="0" y="27" width="1600" height="873" />
-    </state>
-    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1627982822830" />
+    <state x="29" y="145" width="732" height="644" key="#Inspections" />
+    <state x="29" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" />
+    <state x="269" y="332" width="251" height="270" key="#Notifications" />
+    <state x="269" y="332" width="251" height="270" key="#Notifications/0.27.1600.873@0.27.1600.873" />
+    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="208" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/sidebar/sidebar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1628787576368" expanded="true" signature="508:509" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="143" column="51" lean-forward="false" selection-start-line="143" selection-start-column="51" selection-end-line="143" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-users/add-users.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -599,7 +763,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-72">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -610,17 +773,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,26 +794,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3362">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/groupements/Groupement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1004">
           <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
           <folding>
-            <element signature="e#2137#2138#0" expanded="false" />
-            <element signature="e#2181#2182#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2266#2267#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2367#2368#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
+            <element signature="e#2095#2096#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -728,16 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="78" column="75" lean-forward="false" selection-start-line="78" selection-start-column="75" selection-end-line="78" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/GestionprsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -750,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="16" column="205980" lean-forward="false" selection-start-line="16" selection-start-column="205980" selection-end-line="16" selection-end-column="205980" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,38 +905,252 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/header/header.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3510">
           <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html">
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding>
-            <element signature="e#214#220#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="158">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/sidebar/sidebar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+        <state relative-caret-position="390">
+          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1628787576368" expanded="true" signature="508:509" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-users/add-users.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/uploads/FileUploadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/uploads/UploadPhotoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2332">
+          <caret line="228" column="34" lean-forward="false" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+          <folding>
+            <element signature="e#8128#8129#0" expanded="false" />
+            <element signature="e#8158#8159#0" expanded="false" />
+            <element signature="e#8204#8205#0" expanded="false" />
+            <element signature="e#8242#8243#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#638#658#1" expanded="true" />
+            <element signature="e#701#719#1" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#3603#3604#0" expanded="true" />
+            <element signature="e#3645#3646#0" expanded="true" />
+            <element signature="e#3705#3706#0" expanded="true" />
+            <element signature="e#3750#3751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="29" column="85" lean-forward="false" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="85" />
+          <folding>
+            <element signature="e#2948#3812#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/footer/footer.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/users/UserHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1838#1839#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#2332#2333#0" expanded="true" />
+            <element signature="e#2372#2373#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2466#2467#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+            <element signature="e#2696#2697#0" expanded="true" />
+            <element signature="e#2731#2732#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2814#2815#0" expanded="true" />
+            <element signature="e#2858#2859#0" expanded="true" />
+            <element signature="e#2900#2901#0" expanded="true" />
+            <element signature="e#2938#2939#0" expanded="true" />
+            <element signature="e#3000#3001#0" expanded="true" />
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3087#3088#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+            <element signature="e#3196#3197#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3274#3275#0" expanded="true" />
+            <element signature="e#3334#3335#0" expanded="true" />
+            <element signature="e#3386#3387#0" expanded="true" />
+            <element signature="e#3424#3425#0" expanded="true" />
+            <element signature="e#3451#3452#0" expanded="true" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3530#3531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user-service.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gestionprsclient/src/app/user/add-user/add-user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="110" column="6" lean-forward="false" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding />
         </state>
       </provider>

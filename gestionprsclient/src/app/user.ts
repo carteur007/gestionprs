@@ -8,8 +8,8 @@ export class User {
     email: string;
     matricule: string;
     telephone: string;
-    province: string;
-    commune: string;
+    region: string;
+    arrondissement: string;
     dateNaissance: Date;
     dateEntree: Date;
     centreFormation: string;
@@ -18,8 +18,9 @@ export class User {
     statusMatrimoniale: string;
 
 
+
   constructor(id: number, nom: string, prenom: string, nomMere: string, nomPere: string, email: string,
-              matricule: string, telephone: string, province: string, commune:string, dateNaissance: Date,
+              matricule: string, telephone: string, region: string, arrondissement:string, dateNaissance: Date,
               dateEntree: Date, centreFormation: string, profile: string, sexe: string, statusMatrimoniale: string) {
     this.id = id;
     this.nom = nom;
@@ -29,13 +30,14 @@ export class User {
     this.email = email;
     this.matricule = matricule;
     this.telephone = telephone;
-    this.province = province;
-    this.commune = commune;
+    this.region = region;
+    this.arrondissement = arrondissement;
     this.dateNaissance = dateNaissance;
     this.dateEntree = dateEntree;
     this.centreFormation = centreFormation;
     this.profile = profile;
     this.sexe = sexe;
     this.statusMatrimoniale = statusMatrimoniale;
+    this.profile = profile;
   }
 }

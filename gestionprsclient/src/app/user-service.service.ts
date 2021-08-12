@@ -24,7 +24,8 @@ export class UserServiceService {
    * @param user
    * @returns
    */
-  public save(user:any) {
+  public save(user:any): Observable<any> {
+    console.log('je suis la');
     return this.http.post<User>(this.usersUrl, user);
   }
 
