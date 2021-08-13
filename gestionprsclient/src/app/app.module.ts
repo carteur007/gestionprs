@@ -14,6 +14,7 @@ import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {NgxPaginationModule} from "ngx-pagination";
 import {Ng2SearchPipe, Ng2SearchPipeModule} from "ng2-search-filter";
+import { DetailUserComponent } from './user/detail-user/detail-user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {Ng2SearchPipe, Ng2SearchPipeModule} from "ng2-search-filter";
     FooterComponent,
     HomeComponent,
     AddUserComponent,
-    AddUsersComponent
+    AddUsersComponent,
+    DetailUserComponent
   ],
   imports: [
     BrowserModule,

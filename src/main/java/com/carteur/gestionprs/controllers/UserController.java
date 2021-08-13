@@ -32,6 +32,7 @@ public class UserController {
     public ResponseEntity<List<User>>  getUsers() {
         try {
             List<User> users = userService.findAll();
+			System.out.println(users);
             if (users.isEmpty()){
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }else {

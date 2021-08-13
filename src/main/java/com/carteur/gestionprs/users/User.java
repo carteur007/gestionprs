@@ -10,6 +10,7 @@ import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.formations.Formation;
 import com.carteur.gestionprs.grades.Grade;
 import com.carteur.gestionprs.missions.MisionsUser;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
@@ -36,8 +37,12 @@ public class User {
     @Column(name = "lieuNaissance")
     private  String lieuNaissance;
     @Column(name = "dateNaissance")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     private  Date dateNaissance;
     @Column(name = "dateEntree")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     private  Date dateEntree;
     @Column(name = "centreFormation")
     private  String centreFormation;
