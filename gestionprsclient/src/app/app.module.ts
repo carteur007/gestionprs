@@ -9,9 +9,13 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { UserComponent } from './user/user.component';
-import { UserAddComponent } from './user/user-add/user-add.component';
-import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { HomeComponent } from './user/home/home.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { AddUsersComponent } from './user/add-users/add-users.component';
+import {RouterModule} from "@angular/router";
+import {NgxPaginationModule} from "ngx-pagination";
+import {Ng2SearchPipe, Ng2SearchPipeModule} from "ng2-search-filter";
+import { DetailUserComponent } from './user/detail-user/detail-user.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +23,21 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
-    UserComponent,
-    UserAddComponent,
-    UserEditComponent
+    HomeComponent,
+    AddUserComponent,
+    AddUsersComponent,
+    DetailUserComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    RouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,9 @@ public class Mision {
     private String dateDebut;
     private String dateFin;
     private String dateModification;
+    private String titre;
+    private String region;
+    private String secteur;
 
     @JsonManagedReference("m-mu")
     @OneToMany(mappedBy = "mision", cascade = CascadeType.ALL)
@@ -140,4 +143,27 @@ public class Mision {
         this.usermissions = usermissions;
     }
 
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getSecteur() {
+        return secteur;
+    }
+
+    public void setSecteur(String secteur) {
+        this.secteur = secteur;
+    }
 }
