@@ -34,4 +34,5 @@
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/uploads/UploadPhotoService.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/LegionRepository.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/repositories/UserRepository.java
+/home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/RequestFilter.java
 /home/carteur/gestionprs/src/main/java/com/carteur/gestionprs/missions/MisionsUser.java

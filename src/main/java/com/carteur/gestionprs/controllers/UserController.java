@@ -15,14 +15,23 @@ import com.carteur.gestionprs.users.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-@CrossOrigin(origins = "*",maxAge = 3600)
-@RequestMapping("/api")
+//@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping(value = "/api", produces = { MediaType.APPLICATION_JSON_VALUE })
 public class UserController {
 
     private final UserRepository userRepository;
@@ -49,7 +58,7 @@ public class UserController {
         this.affectationRepository = affectationRepository;
     }
     /**
-     * Liste des utilisateurs soit un utilisateur en fonction de son matricule
+     * Liste des utilisateurs soit un utilisateur en fonction du matricule
      * @param matricule
      * @return
      */
@@ -74,7 +83,7 @@ public class UserController {
      * @param id
      * @return
      */
-    @GetMapping("/users/{id}")
+    @GetMapping("/users/show/{id}")
 	public ResponseEntity<User> getUserById(@PathVariable("id") long id) {
         Optional<User> userData = userRepository.findById(id);
         if (!userData.isPresent()) {
@@ -128,7 +137,7 @@ public class UserController {
 		}
 	}
     /**
-     * Suppression complet d'un utilisateur
+     * Suppression d'un utilisateur
      * @param id
      * @return
      */

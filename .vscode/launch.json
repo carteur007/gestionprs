@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GestionprsApplication<gestionprs>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.carteur.gestionprs.GestionprsApplication",
+            "projectName": "gestionprs",
+            "args": ""
+        }
+    ]
+}
