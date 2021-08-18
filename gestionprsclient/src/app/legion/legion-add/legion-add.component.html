@@ -1,0 +1,40 @@
+<div class="card" style="width: 80%">
+    <div class="card-header bg-transparent">
+      <div class="card-text border-0">
+        <h2 class="mb-0">Formulaire d'ajout d'une Legion</h2>
+      </div>
+    </div>
+    <div class="card-body mx-5">
+      <form role="form" [formGroup]="form" (submit)="onSubmit()" >
+        <div class="form-group">
+          <div class="input-group input-group-merge input-group-alternative mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="ni ni-building"></i></span>
+            </div>
+            <input class="form-control" placeholder="Nom de la legion" formControlName="nom" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group input-group-merge input-group-alternative mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="ni ni-key-25"></i></span>
+            </div>
+            <input class="form-control" placeholder="Code de la legion" formControlName="code" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group input-group-merge input-group-alternative mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
+            </div>
+            <input class="form-control" placeholder="Ville" formControlName="ville" type="text">
+          </div>
+        </div>  
+        <div class="text-center">
+          <a href="legions/legions"  class="btn btn-warning mt-4">Retour</a>
+          <button type="submit" class="btn btn-primary mt-4">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

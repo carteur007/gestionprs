@@ -15,6 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgxPaginationModule} from "ngx-pagination";
 import {Ng2SearchPipe, Ng2SearchPipeModule} from "ng2-search-filter";
 import { DetailUserComponent } from './user/detail-user/detail-user.component';
+import { LegionHomeComponent } from './legion/legion-home/legion-home.component';
+import { LegionAddComponent } from './legion/legion-add/legion-add.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DetailUserComponent } from './user/detail-user/detail-user.component';
     HomeComponent,
     AddUserComponent,
     AddUsersComponent,
-    DetailUserComponent
+    DetailUserComponent,
+    LegionHomeComponent,
+    LegionAddComponent
   ],
   imports: [
     BrowserModule,

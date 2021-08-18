@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./user/home/home.component";
+import {GroupementHomeComponent} from "./groupement/home/groupement-home.component";
 import {AddUserComponent} from "./user/add-user/add-user.component";
 import {AddUsersComponent} from "./user/add-users/add-users.component";
 import {DetailUserComponent} from "./user/detail-user/detail-user.component";
+import { LegionHomeComponent } from './legion/legion-home/legion-home.component';
+import { LegionAddComponent } from './legion/legion-add/legion-add.component';
 
 const routes: Routes = [
   {
@@ -17,6 +20,15 @@ const routes: Routes = [
   },
   {
     path:'users/detail/:id', component:DetailUserComponent
+  },
+  {
+    path:'groupements/groupements', component:GroupementHomeComponent
+  },
+  {
+    path:'legions/legions', component:LegionHomeComponent
+  },
+  {
+    path:'legions/add/legion', component:LegionAddComponent
   },
 ];
 
