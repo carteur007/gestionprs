@@ -47,7 +47,13 @@ export class AddUserComponent implements OnInit {
         centreFormation: new FormControl(''),
         profile: new FormControl(null),
         sexe: new FormControl(''),
-        statusMatrimoniale: new FormControl('')
+        statusMatrimoniale: new FormControl(''),
+        fonction: new FormControl(''),
+        ville: new FormControl(''),
+        quartier: new FormControl(''),
+        legion: new FormControl(''),
+        groupement: new FormControl(''),
+        grade: new FormControl('')
       }
     );
   }

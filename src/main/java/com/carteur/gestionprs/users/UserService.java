@@ -1,6 +1,10 @@
 package com.carteur.gestionprs.users;
 
-import com.carteur.gestionprs.repositories.UserRepository;
+import com.carteur.gestionprs.affectations.Affectation;
+import com.carteur.gestionprs.comptes.Compte;
+import com.carteur.gestionprs.groupements.Groupement;
+import com.carteur.gestionprs.legions.Legion;
+import com.carteur.gestionprs.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Sort;
@@ -12,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.time.Year;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,12 +31,41 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private CompteRepository compteRepository;
+
+    @Autowired
+    private LegionRepository legionRepository;
+
+    @Autowired
+    private GroupementRepository groupementRepository;
+
+    @Autowired
+    private AffectationRepository affectationRepository;
 
 
     //Save one user
     public User save(UserHelper userHelper) throws IOException {
 
         User user = new User();
+        Compte compte = new Compte();
+        Affectation affectation = new Affectation();
+        Groupement groupement = groupementRepository.findByNom(userHelper.getGroupement());
+        Legion legion = groupement.getLegion();
+
+        affectation.setCode("AF/"+userRepository.findAll().size()+"/"+legion.getCode()+"/"+groupement.getCode());
+        affectation.setGroupement(groupement);
+        affectation.setName(userHelper.getFonction());
+        affectation.setVille(userHelper.getVille());
+        affectation.setStatus(true);
+        compte.setFonction(userHelper.getFonction());
+        compte.setGrade(userHelper.getGrade());
+        compte.setGroupement(userHelper.getGroupement());
+        compte.setLegion(userHelper.getLegion());
+        compte.setMatricule(userHelper.getMatricule());
+        compte.setMotPasse(userHelper.getMatricule());
+        compte.setQuartier(userHelper.getQuartier());
+        compte.setTelephone(userHelper.getTelephone());
         user.setArrondissement(userHelper.getArrondissement());
         user.setCentreFormation(userHelper.getCentreFormation());
         user.setEmail(userHelper.getEmail());
@@ -52,8 +86,14 @@ public class UserService {
             Files.write(path, bytes);
             user.setProfile(backeEndBase + "/uploadFiles/" + userHelper.getFile().getOriginalFilename());
         }
+        compte.setPhoto(user.getProfile());
 
-       return userRepository.save(user);
+       User savedUser = userRepository.save(user);
+       compte.setUser(savedUser);
+       compteRepository.save(compte);
+       affectation.setCompte(compte);
+       affectationRepository.save(affectation);
+       return savedUser;
 
     }
 

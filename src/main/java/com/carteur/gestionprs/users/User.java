@@ -69,8 +69,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<MisionsUser> usermissions = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Affectation> affectations = new HashSet<>();
+
 
     public User() {
         super();
@@ -345,20 +344,6 @@ public class User {
      */
     public void setUsermissions(Set<MisionsUser> usermissions) {
         this.usermissions = usermissions;
-    }
-
-    /**
-     * @return Set<Affectation> return the affectations
-     */
-    public Set<Affectation> getAffectations() {
-        return affectations;
-    }
-
-    /**
-     * @param affectations the affectations to set
-     */
-    public void setAffectations(Set<Affectation> affectations) {
-        this.affectations = affectations;
     }
 
     public String getProfile() {

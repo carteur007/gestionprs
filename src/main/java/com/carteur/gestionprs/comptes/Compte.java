@@ -32,6 +32,9 @@ public class Compte {
         this.fonction = fonction;
     }
 
+    public Compte() {
+    }
+
     /**
      * @return long return the id
      */

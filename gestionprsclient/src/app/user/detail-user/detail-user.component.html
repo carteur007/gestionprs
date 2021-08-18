@@ -88,13 +88,13 @@
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-username">Username</label>
-                    <input type="text" id="input-username" class="form-control" placeholder="Username" value="lucky.jesse">
+                    <input type="text" id="input-username" class="form-control" placeholder="Username" value="{{user.matricule}}">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-email">Email address</label>
-                    <input type="email" id="input-email" class="form-control" placeholder="jesse@example.com">
+                    <input type="email" id="input-email" class="form-control" placeholder="{{user.email}}">
                   </div>
                 </div>
               </div>
@@ -102,26 +102,98 @@
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-first-name">First name</label>
-                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="Lucky">
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.prenom}}">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-last-name">Last name</label>
-                    <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="Jesse">
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="{{user.nom}}">
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Matricule</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.matricule}}">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name">Region</label>
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="{{user.region}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Father Name</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.nomPere}}">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name">Mother Name</label>
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="{{user.nomMere}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Birth Date</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.dateNaissance}}">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name">Birth Place</label>
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Birth Place" value="{{user.lieuNaissance}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Arrondissement</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.arrondissement}}">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-last-name">Training Center</label>
+                    <input type="text" id="input-last-name" class="form-control" placeholder="Birth Place" value="{{user.centreFormation}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Enrolle Date</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="{{user.dateEntree}}">
+                  </div>
+                </div>
+
+              </div>
+              
             </div>
             <hr class="my-4" />
             <!-- Address -->
             <h6 class="heading-small text-muted mb-4">Contact information</h6>
             <div class="pl-lg-4">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-address">Address</label>
-                    <input id="input-address" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                    <input id="input-address" class="form-control" placeholder="Home Address" value="" type="text">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-address">Phone</label>
+                    <input id="input-address" class="form-control" placeholder="Home Address" value="{{user.telephone}}" type="text">
                   </div>
                 </div>
               </div>
@@ -148,13 +220,6 @@
             </div>
             <hr class="my-4" />
             <!-- Description -->
-            <h6 class="heading-small text-muted mb-4">About me</h6>
-            <div class="pl-lg-4">
-              <div class="form-group">
-                <label class="form-control-label">About Me</label>
-                <textarea rows="4" class="form-control" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-              </div>
-            </div>
           </form>
         </div>
       </div>

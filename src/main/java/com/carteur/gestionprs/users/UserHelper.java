@@ -41,6 +41,13 @@ public class UserHelper {
     private  String region;
     @Column(name = "arrondissement")
     private  String arrondissement;
+    private String motPasse;
+    private String fonction;
+    private String ville;
+    private String quartier;
+    private String legion;
+    private String groupement;
+    private String grade;
 
     private MultipartFile file;
 
@@ -154,5 +161,61 @@ public class UserHelper {
 
     public void setFile(MultipartFile file) {
         this.file = file;
+    }
+
+    public String getMotPasse() {
+        return motPasse;
+    }
+
+    public void setMotPasse(String motPasse) {
+        this.motPasse = motPasse;
+    }
+
+    public String getFonction() {
+        return fonction;
+    }
+
+    public void setFonction(String fonction) {
+        this.fonction = fonction;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getQuartier() {
+        return quartier;
+    }
+
+    public void setQuartier(String quartier) {
+        this.quartier = quartier;
+    }
+
+    public String getLegion() {
+        return legion;
+    }
+
+    public void setLegion(String legion) {
+        this.legion = legion;
+    }
+
+    public String getGroupement() {
+        return groupement;
+    }
+
+    public void setGroupement(String groupement) {
+        this.groupement = groupement;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 }
