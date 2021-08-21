@@ -1,9 +1,11 @@
 package com.carteur.gestionprs.missions;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 @Entity
@@ -21,8 +23,9 @@ public class Mision {
     private String region;
     private String secteur;
 
-    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
-    private Set<MisionsUser> usermissions = new HashSet<>();
+    @JsonManagedReference("m-mu")
+    @OneToMany(mappedBy = "mision", cascade = CascadeType.ALL)
+    private List<MisionsUser> usermissions = new ArrayList<>();
 
     public Mision() {
         super();
@@ -35,7 +38,7 @@ public class Mision {
     }
 
     /**
-     * @param id the id to set
+     * @param id the id to List
      */
     public void setId(long id) {
         this.id = id;
@@ -49,7 +52,7 @@ public class Mision {
     }
 
     /**
-     * @param status the status to set
+     * @param status the status to List
      */
     public void setStatus(String status) {
         this.status = status;
@@ -63,7 +66,7 @@ public class Mision {
     }
 
     /**
-     * @param rapport the rapport to set
+     * @param rapport the rapport to List
      */
     public void setRapport(String rapport) {
         this.rapport = rapport;
@@ -77,7 +80,7 @@ public class Mision {
     }
 
     /**
-     * @param observation the observation to set
+     * @param observation the observation to List
      */
     public void setObservation(String observation) {
         this.observation = observation;
@@ -91,7 +94,7 @@ public class Mision {
     }
 
     /**
-     * @param dateDebut the dateDebut to set
+     * @param dateDebut the dateDebut to List
      */
     public void setDateDebut(String dateDebut) {
         this.dateDebut = dateDebut;
@@ -105,7 +108,7 @@ public class Mision {
     }
 
     /**
-     * @param dateFin the dateFin to set
+     * @param dateFin the dateFin to List
      */
     public void setDateFin(String dateFin) {
         this.dateFin = dateFin;
@@ -119,7 +122,7 @@ public class Mision {
     }
 
     /**
-     * @param dateModification the dateModification to set
+     * @param dateModification the dateModification to List
      */
     public void setDateModification(String dateModification) {
         this.dateModification = dateModification;
@@ -127,16 +130,16 @@ public class Mision {
 
 
     /**
-     * @return Set<MisionsUser> return the usermissions
+     * @return List<MisionsUser> return the usermissions
      */
-    public Set<MisionsUser> getUsermissions() {
+    public List<MisionsUser> getUsermissions() {
         return usermissions;
     }
 
     /**
-     * @param usermissions the usermissions to set
+     * @param usermissions the usermissions to List
      */
-    public void setUsermissions(Set<MisionsUser> usermissions) {
+    public void setUsermissions(List<MisionsUser> usermissions) {
         this.usermissions = usermissions;
     }
 

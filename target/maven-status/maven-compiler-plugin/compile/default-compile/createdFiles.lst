@@ -1,10 +1,10 @@
-com/carteur/gestionprs/affectations/Affectation.class
-com/carteur/gestionprs/users/User.class
 com/carteur/gestionprs/repositories/MisionRepository.class
 com/carteur/gestionprs/grades/Grade.class
-com/carteur/gestionprs/controllers/MisionController.class
-com/carteur/gestionprs/formations/Formation.class
+com/carteur/gestionprs/users/User.class
 com/carteur/gestionprs/missions/MisionsUser.class
-com/carteur/gestionprs/missions/Mision.class
 com/carteur/gestionprs/comptes/Compte.class
+com/carteur/gestionprs/affectations/Affectation.class
+com/carteur/gestionprs/controllers/MisionController.class
+com/carteur/gestionprs/missions/Mision.class
+com/carteur/gestionprs/formations/Formation.class
 com/carteur/gestionprs/caissiers/Caissier.class

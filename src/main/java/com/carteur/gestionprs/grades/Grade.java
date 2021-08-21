@@ -3,6 +3,7 @@ package com.carteur.gestionprs.grades;
 import javax.persistence.*;
 
 import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -18,6 +19,7 @@ public class Grade {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("u-g")
     private User user;
     
     public Grade() {

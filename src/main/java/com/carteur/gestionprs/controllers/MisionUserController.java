@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.carteur.gestionprs.missions.Mision;
 import com.carteur.gestionprs.missions.MisionsUser;
+import com.carteur.gestionprs.repositories.MisionRepository;
 import com.carteur.gestionprs.repositories.MisionUserRepository;
+import com.carteur.gestionprs.repositories.UserRepository;
+import com.carteur.gestionprs.users.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,14 +29,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class MisionUserController {
     
+    private final MisionRepository misionRepository;
+    private final UserRepository userRepository;
+    private final MisionUserRepository misionUserRepository;
+    
     @Autowired
-    MisionUserRepository misionUserRepository;
-
+    public MisionUserController(
+        UserRepository uRepo, 
+        MisionRepository mRepo,
+        MisionUserRepository muRepo) {
+        this.userRepository = uRepo;
+        this.misionRepository = mRepo;
+        this.misionUserRepository = muRepo;
+    }
     /**
      * Recherche les MissionUsers
      * @return
      */
-    @GetMapping("/missionusers")
+    @GetMapping("/musers")
     public ResponseEntity<List<MisionsUser>>  getMisionUsers() {
         try {
             List<MisionsUser> misionList = new ArrayList<MisionsUser>(); 
@@ -50,10 +64,9 @@ public class MisionUserController {
      * @param id
      * @return
      */
-    @GetMapping("/missionusers/{id}")
+    @GetMapping("/musers/{id}")
 	public ResponseEntity<MisionsUser> getMisionUserById(@PathVariable("id") long id) {
         Optional<MisionsUser> misionData = misionUserRepository.findById(id);
-
 		if (misionData.isPresent()) {
 			return new ResponseEntity<>(misionData.get(), HttpStatus.OK);
 		} else {
@@ -64,12 +77,23 @@ public class MisionUserController {
      * Creation d'une MissionUser
      * @param mision
      * @return
-     */
-    @PostMapping(value="/missionusers")
-    public ResponseEntity<MisionsUser> createMisionUser(@RequestBody MisionsUser misionUser ) {
+     */ 
+    @PostMapping(value="/musers/{userId}/{misionId}/create")
+    public ResponseEntity<MisionsUser> createMisionUser(
+        @RequestBody MisionsUser misionUser ,
+        @PathVariable("userId") long userId,
+        @PathVariable("misionId") long misionId
+        ) {
         try {
-            MisionsUser _mision = misionUserRepository.save(misionUser);
-            return new ResponseEntity<>(_mision, HttpStatus.CREATED);
+            Optional <User> _user = userRepository.findById(userId);
+            Optional <Mision> _mision = misionRepository.findById(misionId);
+            if(!(_user.isPresent()) && !(_mision.isPresent())){
+                return ResponseEntity.notFound().build();
+            }
+            misionUser.setUser(_user.get());
+            misionUser.setMission(_mision.get());
+            MisionsUser _mision_user = misionUserRepository.save(misionUser);
+            return new ResponseEntity<>(_mision_user, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -80,7 +104,7 @@ public class MisionUserController {
      * @param mision
      * @return
      */
-    @PutMapping(value="/missionusers/{id}")
+    @PutMapping(value="/musers/{id}")
     public ResponseEntity<MisionsUser> updateMisionUser(@PathVariable("id") long id, @RequestBody MisionsUser misionUser) {
         try {
             Optional<MisionsUser> misionData = misionUserRepository.findById(id);
@@ -98,7 +122,7 @@ public class MisionUserController {
      * @param id
      * @return
      */
-    @DeleteMapping(value="/missionusers/{id}")
+    @DeleteMapping(value="/musers/{id}")
     public ResponseEntity<List<MisionsUser>> deleteMisionUserById(@PathVariable("id") long id) {
         try {
             misionUserRepository.deleteById(id);
@@ -111,7 +135,7 @@ public class MisionUserController {
      * Suppression de toutes les MisionUsers
      * @return
      */
-    @DeleteMapping(value="/missionusers")
+    @DeleteMapping(value="/musers")
     public ResponseEntity<List<MisionsUser>> deleteAllMisionUser() {
         try {
             misionUserRepository.deleteAll();;

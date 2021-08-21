@@ -1,12 +1,12 @@
 package com.carteur.gestionprs.legions;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
 
 import com.carteur.gestionprs.groupements.Groupement;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Legion {
@@ -18,8 +18,9 @@ public class Legion {
     private String nom;
     private String origine;
 
+    @JsonManagedReference("l-g")
     @OneToMany(mappedBy = "legion", cascade = CascadeType.ALL)
-    private Set<Groupement> groupements = new HashSet<>();
+    private List<Groupement> groupements = new ArrayList<>();
 
     public Legion() {
         super();
@@ -32,7 +33,7 @@ public class Legion {
     }
 
     /**
-     * @param id the id to set
+     * @param id the id to List
      */
     public void setId(long id) {
         this.id = id;
@@ -46,7 +47,7 @@ public class Legion {
     }
 
     /**
-     * @param code the code to set
+     * @param code the code to List
      */
     public void setCode(String code) {
         this.code = code;
@@ -60,7 +61,7 @@ public class Legion {
     }
 
     /**
-     * @param ville the ville to set
+     * @param ville the ville to List
      */
     public void setVille(String ville) {
         this.ville = ville;
@@ -74,7 +75,7 @@ public class Legion {
     }
 
     /**
-     * @param nom the nom to set
+     * @param nom the nom to List
      */
     public void setNom(String nom) {
         this.nom = nom;
@@ -88,10 +89,25 @@ public class Legion {
     }
 
     /**
-     * @param origine the origine to set
+     * @param origine the origine to List
      */
     public void setOrigine(String origine) {
         this.origine = origine;
+    }
+
+
+    /**
+     * @return List<Groupement> return the groupements
+     */
+    public List<Groupement> getGroupements() {
+        return groupements;
+    }
+
+    /**
+     * @param groupements the groupements to List
+     */
+    public void setGroupements(List<Groupement> groupements) {
+        this.groupements = groupements;
     }
 
 }

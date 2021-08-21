@@ -2,9 +2,9 @@ package com.carteur.gestionprs.affectations;
 
 import javax.persistence.*;
 
-import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.groupements.Groupement;
 import com.carteur.gestionprs.users.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -18,16 +18,16 @@ public class Affectation {
     private String ville;
     private String origine;
 
-    private Boolean status;
-
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "compte_id")
+    @JoinColumn(name = "user_id")    
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private Compte compte;
+    @JsonBackReference("u-a")
+    private User user;
     
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "groupement_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonBackReference("g-a")
     private Groupement groupement;
 
     public String getCode() {
@@ -85,12 +85,18 @@ public class Affectation {
         this.origine = origine;
     }
 
-    public Compte getCompte() {
-        return compte;
+    /**
+     * @return User return the user
+     */
+    public User getUser() {
+        return user;
     }
 
-    public void setCompte(Compte compte) {
-        this.compte = compte;
+    /**
+     * @param user the user to set
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
     /**
@@ -107,11 +113,4 @@ public class Affectation {
         this.groupement = groupement;
     }
 
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
 }

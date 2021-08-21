@@ -1,12 +1,14 @@
 package com.carteur.gestionprs.controllers;
 
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import com.carteur.gestionprs.missions.Mision;
 import com.carteur.gestionprs.repositories.MisionRepository;
+import com.carteur.gestionprs.repositories.MisionUserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,15 +22,22 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
 public class MisionController {
     
-    @Autowired
-    MisionRepository misionRepository;
+    private final MisionRepository misionRepository;
+    private final MisionUserRepository misionUserRepository;
 
+    @Autowired
+    public MisionController(MisionRepository misionRepository, MisionUserRepository misionUserRepository) {
+        this.misionRepository = misionRepository;
+        this.misionUserRepository = misionUserRepository;
+    }
     /**
      * Recherche les Missions
      * @return
@@ -54,7 +63,6 @@ public class MisionController {
     @GetMapping("/missions/{id}")
 	public ResponseEntity<Mision> getMisionById(@PathVariable("id") long id) {
         Optional<Mision> misionData = misionRepository.findById(id);
-
 		if (misionData.isPresent()) {
 			return new ResponseEntity<>(misionData.get(), HttpStatus.OK);
 		} else {
@@ -70,7 +78,8 @@ public class MisionController {
     public ResponseEntity<Mision> createMision(@RequestBody Mision mision ) {
         try {
             Mision _mision = misionRepository.save(mision);
-            return new ResponseEntity<>(_mision, HttpStatus.CREATED);
+            URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(_mision.getId()).toUri();
+            return ResponseEntity.created(location).body(_mision);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -95,20 +104,6 @@ public class MisionController {
 		}
     }
     /**
-     * Suppression d'une Mision
-     * @param id
-     * @return
-     */
-    @DeleteMapping(value="/missions/{id}")
-    public ResponseEntity<List<Mision>> deleteMisionById(@PathVariable("id") long id) {
-        try {
-            misionRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.GONE);
-		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-    }
-    /**
      * Suppression de toutes les Misions
      * @return
      */
@@ -120,5 +115,28 @@ public class MisionController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+    }
+    /**
+     * Suppression complete d'une Mision
+     * @param id
+     * @return
+     */
+    @DeleteMapping(value="/missions/{id}")
+    public ResponseEntity<List<Mision>> deleteMisionById(@PathVariable("id") long id) {
+        try {
+            Optional<Mision> misionData = misionRepository.findById(id);
+            if (!misionData.isPresent()) {
+                return ResponseEntity.unprocessableEntity().build();
+		    } 
+            deleteMisionUserInTransaction(misionData.get());
+            misionRepository.delete(misionData.get());
+            return ResponseEntity.noContent().build();
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+    }
+    @Transactional
+    public void deleteMisionUserInTransaction(Mision mision) {
+        misionUserRepository.deleteByMisionUserId(mision.getId());
     }
 }
