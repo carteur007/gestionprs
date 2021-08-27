@@ -17,6 +17,7 @@ public class Affectation {
     private String code;
     private String ville;
     private String origine;
+    private Boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")    
@@ -113,4 +114,11 @@ public class Affectation {
         this.groupement = groupement;
     }
 
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
 }
