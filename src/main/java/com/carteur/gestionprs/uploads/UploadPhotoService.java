@@ -23,12 +23,12 @@ public class UploadPhotoService {
     public void addPhoto(long compteId, MultipartFile mFile) throws IOException {
         Optional<Compte> compteData = compteRepository.findById(compteId);
         Compte _compte = compteData.get();
-        _compte.setPhoto(mFile.getBytes());
+        //_compte.setPhoto(mFile.getBytes());
         compteRepository.save(_compte);
     }
     public byte[]  getPhoto(long compteId)throws IOException {
         Optional<Compte> compteData = compteRepository.findById(compteId);
         Compte _compte = compteData.get();
-        return _compte.getPhoto();        
+        //return _compte.getPhoto();
     }
 }

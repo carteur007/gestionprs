@@ -2,6 +2,7 @@ package com.carteur.gestionprs.affectations;
 
 import javax.persistence.*;
 
+import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.groupements.Groupement;
 import com.carteur.gestionprs.users.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -20,10 +21,10 @@ public class Affectation {
     private Boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id")    
+    @JoinColumn(name = "compte_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @JsonBackReference("u-a")
-    private User user;
+    @JsonBackReference("c-a")
+    private Compte compte;
     
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "groupement_id")
@@ -89,15 +90,15 @@ public class Affectation {
     /**
      * @return User return the user
      */
-    public User getUser() {
-        return user;
+    public Compte getCompte() {
+        return compte;
     }
 
     /**
-     * @param user the user to set
+     * @param compte the user to set
      */
-    public void setUser(User user) {
-        this.user = user;
+    public void setCompte(Compte compte) {
+        this.compte = compte;
     }
 
     /**
