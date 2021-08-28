@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "USER")
-public class User {
+public class  User {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -68,7 +68,6 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<MisionsUser> usermissions = new HashSet<>();
-
 
 
     public User() {
@@ -345,6 +344,7 @@ public class User {
     public void setUsermissions(Set<MisionsUser> usermissions) {
         this.usermissions = usermissions;
     }
+
 
     public String getProfile() {
         return profile;
