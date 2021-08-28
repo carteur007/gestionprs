@@ -29,7 +29,6 @@ import { DetailUserComponent } from './user/detail-user/detail-user.component';
     DetailUserComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
