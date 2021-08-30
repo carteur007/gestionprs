@@ -6,8 +6,8 @@ import com.carteur.gestionprs.affectations.Affectation;
 
 public interface CustomAffectationRepository {
     
-    public List<Affectation> findAffectationByUserId(long id_user);
-    public List<Affectation> findAffectationByGroupementId(long id_user);
-    public List<Affectation> findAffectationByGroupementIdAndUserId(long id_group, long id_user);
+    public List<Affectation> findAffectationByCompteId(Long id);
+    public List<Affectation> findAffectationByGroupementId(Long id);
+    public List<Affectation> findAffectationByGroupementIdAndCompteId(Long id_group, Long id_compte);
     
 }

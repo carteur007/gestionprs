@@ -1,7 +1,9 @@
 package com.carteur.gestionprs.controllers;
 
 import com.carteur.gestionprs.affectations.Affectation;
+import com.carteur.gestionprs.comptes.Compte;
 import com.carteur.gestionprs.groupements.Groupement;
+import com.carteur.gestionprs.repositories.CompteRepository;
 import com.carteur.gestionprs.users.User;
 import com.carteur.gestionprs.repositories.AffectationRepository;
 import com.carteur.gestionprs.repositories.GroupementRepository;
@@ -25,6 +27,9 @@ public class AffectationController {
     private final UserRepository userRepository;
     private final GroupementRepository groupementRepository;
     private final AffectationRepository affectationRepository;
+
+    @Autowired
+    private CompteRepository compteRepository;
 
     @Autowired
     public AffectationController(
@@ -53,6 +58,42 @@ public class AffectationController {
             return new ResponseEntity<>((List<Affectation>) null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    /**
+     * Recherche les affectations
+     * @return
+     */
+    @GetMapping("/affectations/compte/{id}")
+    public ResponseEntity<List<Affectation>>  getAllAffectationsForAccount(@PathVariable Long id) {
+        try {
+            List<Affectation> affecList = new ArrayList<Affectation>();
+            affectationRepository.findAllByCompte_Id(id).forEach(affecList::add);
+            if(affecList.isEmpty()){
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(affecList,HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>((List<Affectation>) null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    /**
+     * Recherche les affectations
+     * @return
+     */
+    @GetMapping("/affectations/groupement/{id}")
+    public ResponseEntity<List<Affectation>>  getAllAffectationsForGroupement(@PathVariable Long id) {
+        try {
+            List<Affectation> affecList = new ArrayList<Affectation>();
+            affectationRepository.findAllByGroupement_Id(id).forEach(affecList::add);
+            if(affecList.isEmpty()){
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(affecList,HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>((List<Affectation>) null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     /**
      * Chercher d'une affectations par son id
      * @param id
@@ -71,19 +112,19 @@ public class AffectationController {
      * @param affect
      * @return
      */
-    @PostMapping(value="/affectations/{userId}/{groupementId}/create")
+    @PostMapping(value="/affectations/{compteId}/{groupementId}/create")
     public ResponseEntity<Affectation> createAffectation(
             @RequestBody Affectation affect, 
-            @PathVariable("userId") long userId,
-            @PathVariable("groupementId") long groupementId
+            @PathVariable Long compteId,
+            @PathVariable Long groupementId
             ) {
         try {
-            Optional<User>  _user = userRepository.findById(userId);
+            Optional<Compte> compte = compteRepository.findById(compteId);
             Optional<Groupement>  _groupement = groupementRepository.findById(groupementId);
-            if(!_user.isPresent() && !_groupement.isPresent()){
+            if(!compte.isPresent() && !_groupement.isPresent()){
                 return ResponseEntity.unprocessableEntity().build();
             }
-            affect.setUser(_user.get());
+            affect.setCompte(compte.get());
             affect.setGroupement(_groupement.get());
             Affectation _affect = affectationRepository.save(affect);
             URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{[id}")

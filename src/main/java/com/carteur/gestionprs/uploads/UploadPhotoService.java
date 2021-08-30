@@ -29,6 +29,6 @@ public class UploadPhotoService {
     public byte[]  getPhoto(long compteId)throws IOException {
         Optional<Compte> compteData = compteRepository.findById(compteId);
         Compte _compte = compteData.get();
-        //return _compte.getPhoto();
+        return null;
     }
 }

@@ -73,13 +73,13 @@ public class GroupementController {
     }
     /**
      * Recherche d'un Groupement par l'id de la legion
-     * @param legionId
-     * @param pageable
+     * @param id
+     *
      * @return
      */
-    @GetMapping("/groupements/{LegionId}")
-    public ResponseEntity<Page<Groupement>> getByLegionId(@PathVariable long legionId, Pageable pageable) {
-        return ResponseEntity.ok(groupementRepository.findByLegionId(legionId, pageable));
+    @GetMapping("/groupements/legion/{id}")
+    public ResponseEntity<List<Groupement>> getByLegionId(@PathVariable Long id) {
+        return ResponseEntity.ok(groupementRepository.findAllByLegion_Id(id));
     }
     /**
      * Creation d'un Groupement
@@ -106,7 +106,7 @@ public class GroupementController {
      * Mise a jour d'un Groupement
      * 
      * @param id
-     * @param Groupement
+     * @param
      * @return
      */
     @PutMapping(value = "/groupements/{id}")

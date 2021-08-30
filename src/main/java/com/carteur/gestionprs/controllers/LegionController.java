@@ -138,6 +138,6 @@ public class LegionController {
     }
     @Transactional
     public void deleteGroupementInTransaction(Legion legion) {
-        groupementRepository.deleteByLegionId(legion.getId());
+        groupementRepository.deleteAllByLegion_Id(legion.getId());
     }
 }

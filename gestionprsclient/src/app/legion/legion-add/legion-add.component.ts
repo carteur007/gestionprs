@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LegionService } from 'src/app/service/legion.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { LegionService } from 'src/app/service/legion.service';
 })
 export class LegionAddComponent implements OnInit {
 
-  form: any={};
+  legionForm: any={};
   constructor(private legionService: LegionService, private router: Router) { }
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class LegionAddComponent implements OnInit {
   }
 
   init(){
-    this.form = new FormGroup({
+    this.legionForm = new FormGroup({
       nom: new FormControl(''),
       ville: new FormControl(''),
       code: new FormControl('')
@@ -28,9 +28,9 @@ export class LegionAddComponent implements OnInit {
 
   onSubmit(){
     const formData = {
-      nom: this.form.get('nom').value,
-      ville: this.form.get('ville').value,
-      code: this.form.get('code').value
+      nom: this.legionForm.get('nom').value,
+      ville: this.legionForm.get('ville').value,
+      code: this.legionForm.get('code').value
     };
     console.log(formData);
 
@@ -44,5 +44,8 @@ export class LegionAddComponent implements OnInit {
       }
     );
   }
+
+
+  
 
 }

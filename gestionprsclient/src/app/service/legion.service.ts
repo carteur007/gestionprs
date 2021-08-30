@@ -19,4 +19,14 @@ export class LegionService {
    save(form: any): Observable<any>{
     return this.http.post(this.legionUrl, form);
    }
+
+
+   update(form: any, id: number): Observable<any>{
+
+    return this.http.put(this.legionUrl+'/'+id,form);
+   }
+
+   getOne(id:number): Observable<any>{
+     return this.http.get(this.legionUrl+'/'+id);
+   }
 }

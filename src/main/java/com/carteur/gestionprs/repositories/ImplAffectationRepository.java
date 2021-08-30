@@ -13,13 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional(readOnly = true)
-public class ImplAffectationRepository implements CustomAffectationRepository {
+public abstract class ImplAffectationRepository implements CustomAffectationRepository {
 
     @PersistenceContext
     EntityManager entityManager;
 
     @SuppressWarnings("unchecked")
-    public List<Affectation> findAffectationByUserId(long id_user) {
+    public List<Affectation> findAffectationByCompteId(long id_user) {
         String sql = "SELECT af.* FROM Affectation af " + "WHERE af.user.id  = ?1";
         Query query = entityManager.createQuery(sql, Affectation.class);
         query.setParameter(1, id_user);
@@ -33,7 +33,7 @@ public class ImplAffectationRepository implements CustomAffectationRepository {
         return query.getResultList();
     }
     @SuppressWarnings("unchecked")
-    public List<Affectation> findAffectationByGroupementIdAndUserId(long id_groupement, long id_user) {
+    public List<Affectation> findAffectationByGroupementIdAndCompteId(long id_groupement, long id_user) {
         String sql = "SELECT af.* FROM Affectation af " + "WHERE af.groupement.id  = ?1 AND af.user.id  = ?2";
         Query query = entityManager.createQuery(sql, Affectation.class);
         query.setParameter(1, id_groupement);

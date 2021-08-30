@@ -6,6 +6,7 @@ import { AddUsersComponent } from './user/add-users/add-users.component';
 import { DetailUserComponent } from './user/detail-user/detail-user.component';
 import { LegionHomeComponent } from './legion/legion-home/legion-home.component';
 import { LegionAddComponent } from './legion/legion-add/legion-add.component';
+import { LegionUpdateComponent } from './legion/legion-update/legion-update.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,13 @@ const routes: Routes = [
     path:'legions/legions', component:LegionHomeComponent
   },
   {
-    path:'legions/add', component:LegionAddComponent
+    path:'legions/add/legion', component:LegionAddComponent
+  },
+  {
+    path:'legions/add/legion', component:LegionAddComponent
+  },
+  {
+    path:'legions/update/legion/:id', component:LegionUpdateComponent
   },
 ];
 
