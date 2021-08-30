@@ -19,6 +19,8 @@ import { DetailUserComponent } from './user/detail-user/detail-user.component';
 import { LegionAddComponent } from './legion/legion-add/legion-add.component';
 import { LegionHomeComponent } from './legion/legion-home/legion-home.component';
 import { LegionUpdateComponent } from './legion/legion-update/legion-update.component';
+import { GroupementHomeComponent } from './groupement/home/groupement-home.component';
+import { GroupementAddComponent } from './groupement/groupement-add/groupement-add.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { LegionUpdateComponent } from './legion/legion-update/legion-update.comp
     DetailUserComponent,
     LegionAddComponent,
     LegionHomeComponent,
-    LegionUpdateComponent
+    LegionUpdateComponent,
+    GroupementHomeComponent,
+    GroupementAddComponent
   ],
   imports: [
     BrowserModule,

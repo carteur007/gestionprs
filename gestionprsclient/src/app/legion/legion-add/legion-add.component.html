@@ -27,7 +27,10 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
             </div>
-            <input class="form-control" placeholder="Ville" formControlName="ville" type="text">
+            <select formControlName="ville" class="form-control" >
+              <option value="">-- Choisir une ville --</option>
+              <option *ngFor="let item of villes" value="{{item}}">{{item}}</option>
+            </select>
           </div>
         </div>  
         <div class="text-center">

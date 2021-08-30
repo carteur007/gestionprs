@@ -12,11 +12,14 @@ export class LegionUpdateComponent implements OnInit {
 
   legionForm: any={};
   currentLegion: any = {};
+  villes: string[]=[];
   constructor(private legionService: LegionService, private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getLegion(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.init();
+    this.villes = ['Ville 1','Ville 2','Ville 3','Ville 4','Ville 5','Ville 6'];
   }
 
   init(){
@@ -36,7 +39,7 @@ export class LegionUpdateComponent implements OnInit {
     };
     console.log(formData);
 
-    this.legionService.save(formData).subscribe(
+    this.legionService.update(formData, this.currentLegion.id).subscribe(
       data => {
         console.log(data);
         this.router.navigateByUrl('legions/legions');

@@ -11,10 +11,11 @@ import { LegionService } from 'src/app/service/legion.service';
 export class LegionAddComponent implements OnInit {
 
   legionForm: any={};
+  villes: string[]=[];
   constructor(private legionService: LegionService, private router: Router) { }
 
   ngOnInit(): void {
-
+    this.villes = ['Ville 1','Ville 2','Ville 3','Ville 4','Ville 5','Ville 6'];
     this.init();
   }
 

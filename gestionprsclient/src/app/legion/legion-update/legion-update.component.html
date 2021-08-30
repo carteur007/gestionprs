@@ -11,7 +11,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-building"></i></span>
             </div>
-            <input class="form-control" placeholder="Nom de la legion" formControlName="nom" type="text">
+            <input class="form-control" placeholder="Nom de la legion" formControlName="nom" [(ngModel)]="currentLegion.nom" type="text">
           </div>
         </div>
         <div class="form-group">
@@ -19,7 +19,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-key-25"></i></span>
             </div>
-            <input class="form-control" placeholder="Code de la legion" formControlName="code" type="text">
+            <input class="form-control" placeholder="Code de la legion" [(ngModel)]="currentLegion.code" formControlName="code" type="text">
           </div>
         </div>
         <div class="form-group">
@@ -27,7 +27,10 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
             </div>
-            <input class="form-control" placeholder="Ville" formControlName="ville" type="text">
+            <select formControlName="ville" [(ngModel)]="currentLegion.ville" class="form-control" >
+                <option value="">-- Choisir une ville --</option>
+                <option *ngFor="let item of villes" value="{{item}}">{{item}}</option>
+            </select>
           </div>
         </div>  
         <div class="text-center">

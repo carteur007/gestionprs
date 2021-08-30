@@ -11,10 +11,12 @@ export class LegionHomeComponent implements OnInit {
   lists: any ={};
   p: number=1;
   searchItem: string = '';
+  
   constructor( private legionService: LegionService) { }
 
   ngOnInit(): void {
     this.getAll();
+    
   }
 
   getAll(){
