@@ -21,6 +21,7 @@ import { LegionHomeComponent } from './legion/legion-home/legion-home.component'
 import { LegionUpdateComponent } from './legion/legion-update/legion-update.component';
 import { GroupementHomeComponent } from './groupement/home/groupement-home.component';
 import { GroupementAddComponent } from './groupement/groupement-add/groupement-add.component';
+import { GroupementUpdateComponent } from './groupement/groupement-update/groupement-update.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GroupementAddComponent } from './groupement/groupement-add/groupement-a
     LegionHomeComponent,
     LegionUpdateComponent,
     GroupementHomeComponent,
-    GroupementAddComponent
+    GroupementAddComponent,
+    GroupementUpdateComponent
   ],
   imports: [
     BrowserModule,

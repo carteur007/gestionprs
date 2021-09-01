@@ -9,6 +9,7 @@ import { LegionAddComponent } from './legion/legion-add/legion-add.component';
 import { LegionUpdateComponent } from './legion/legion-update/legion-update.component';
 import { GroupementHomeComponent } from './groupement/home/groupement-home.component';
 import { GroupementAddComponent } from './groupement/groupement-add/groupement-add.component';
+import { GroupementUpdateComponent } from './groupement/groupement-update/groupement-update.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path:'groupements/add/groupement/:id', component: GroupementAddComponent
+  },
+  {
+    path:'groupements/update/groupement/:id', component: GroupementUpdateComponent,
   },
 ];
 

@@ -1,17 +1,17 @@
 <div class="card" style="width: 80%">
     <div class="card-header bg-transparent">
       <div class="card-text border-0">
-        <h2 class="mb-0">Formulaire d'ajout d'un groupement</h2>
+        <h2 class="mb-0">Formulaire de modification d'un groupement</h2>
       </div>
     </div>
     <div class="card-body mx-5">
-      <form role="form" [formGroup]="groupementForm" (submit)="onSubmit()">
+      <form role="form" [formGroup]="form" (submit)="onSubmit()">
         <div class="form-group">
           <div class="input-group input-group-merge input-group-alternative mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-building"></i></span>
             </div>
-            <input class="form-control" placeholder="Nom du groupement" formControlName="nom" type="text">
+            <input class="form-control" placeholder="Nom du groupement" [(ngModel)]="currentGroupement.nom" formControlName="nom" type="text">
           </div>
         </div>
         <div class="form-group">
@@ -19,7 +19,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-key-25"></i></span>
             </div>
-            <input class="form-control" placeholder="Code du groupement" formControlName="code" type="text">
+            <input class="form-control" placeholder="Code du groupement" [(ngModel)]="currentGroupement.code" formControlName="code" type="text">
           </div>
         </div>
         <div class="form-group">
@@ -27,7 +27,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="ni ni-key-25"></i></span>
               </div>
-              <input class="form-control" placeholder="Pseudonyme du groupement" formControlName="pseudo" type="text">
+              <input class="form-control" [(ngModel)]="currentGroupement.pseudo" placeholder="Pseudonyme du groupement" formControlName="pseudo" type="text">
             </div>
           </div>
         <div class="form-group">
@@ -35,14 +35,14 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
             </div>
-            <select formControlName="ville" class="form-control" >
+            <select [(ngModel)]="currentGroupement.ville" formControlName="ville" class="form-control" >
               <option value="">-- Choisir une ville --</option>
               <option *ngFor="let item of villes" value="{{item}}">{{item}}</option>
             </select>
           </div>
         </div>  
         <div class="text-center">
-          <a href="groupements/groupements/{{currentLegion.id}}"  class="btn btn-warning mt-4">Retour</a>
+          <a href="groupements/groupements/{{currentGroupement.id}}"  class="btn btn-warning mt-4">Retour</a>
           <button type="submit" class="btn btn-primary mt-4">Enregistrer</button>
         </div>
       </form>

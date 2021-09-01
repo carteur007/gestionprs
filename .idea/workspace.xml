@@ -4,14 +4,10 @@
     <list default="true" id="e4c5df84-8f68-4d3f-b078-3e79a2215ad8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/app-routing.module.ts" />
       <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/home/groupement-home.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/home/groupement-home.component.html" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/home/groupement-home.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/home/groupement-home.component.ts" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-add/legion-add.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-add/legion-add.component.html" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-add/legion-add.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-add/legion-add.component.ts" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-home/legion-home.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-home/legion-home.component.html" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-home/legion-home.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-home/legion-home.component.ts" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-update/legion-update.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-update/legion-update.component.html" />
-      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-update/legion-update.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/legion/legion-update/legion-update.component.ts" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/groupement-add/groupement-add.component.html" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/groupement-add/groupement-add.component.html" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/groupement-add/groupement-add.component.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/groupement/groupement-add/groupement-add.component.ts" />
+      <change beforePath="$PROJECT_DIR$/gestionprsclient/src/app/service/groupement.service.ts" afterPath="$PROJECT_DIR$/gestionprsclient/src/app/service/groupement.service.ts" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,8 +120,8 @@
       <file leaf-file-name="GroupementController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+            <state relative-caret-position="468">
+              <caret line="92" column="74" lean-forward="false" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -217,8 +213,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/ImplAffectationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/repositories/AffectationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/AffectationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java" />
       </list>
     </option>
   </component>
@@ -481,12 +477,12 @@
       <workItem from="1629544339083" duration="1404000" />
       <workItem from="1630057113827" duration="4364000" />
       <workItem from="1630142148387" duration="592000" />
-      <workItem from="1630309921438" duration="8283000" />
+      <workItem from="1630309921438" duration="11624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68651000" />
+    <option name="totallyTimeSpent" value="71992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1260" height="676" extended-state="0" />
@@ -946,6 +942,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/LegionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/groupements/Groupement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1218">
@@ -956,18 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/LegionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/carteur/gestionprs/controllers/GroupementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        <state relative-caret-position="468">
+          <caret line="92" column="74" lean-forward="false" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
           <folding />
         </state>
       </provider>

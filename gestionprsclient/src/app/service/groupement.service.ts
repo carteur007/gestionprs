@@ -17,4 +17,17 @@ export class GroupementService {
   getAllByLegion(id:any):Observable<any>{
 return this.http.get(this.groupementUrl+'/legion/'+id);
   }
+
+
+  save(form:any, id:any): Observable<any>{
+    return this.http.post(this.groupementUrl+'/'+id, form);
+  }
+
+  getGroupement(id:any): Observable<any>{
+    return this.http.get(this.groupementUrl+'/'+id);
+  }
+
+  updateGroupement(id:any, form: any): Observable<any>{
+    return this.http.put(this.groupementUrl+'/'+id, form);
+  }
 }

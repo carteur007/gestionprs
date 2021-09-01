@@ -64,7 +64,7 @@ public class GroupementController {
      * @return
      */
     @GetMapping("/groupements/{id}")
-    public ResponseEntity<Groupement> getLegionById(@PathVariable("id") long id) {
+    public ResponseEntity<Groupement> getGroupementById(@PathVariable("id") long id) {
         Optional<Groupement> groupementData = groupementRepository.findById(id);
         if (!groupementData.isPresent()) {
             return ResponseEntity.unprocessableEntity().build();
@@ -87,10 +87,10 @@ public class GroupementController {
      * @param groupement
      * @return
      */
-    @PostMapping(value = "/groupements/{legionId}/create")
-    public ResponseEntity<Groupement> createGroupement( @PathVariable("legionId")long legionId ,@RequestBody Groupement groupement) {
+    @PostMapping(value = "/groupements/{id}")
+    public ResponseEntity<Groupement> createGroupement( @PathVariable Long id ,@RequestBody Groupement groupement) {
         try {
-            Optional<Legion> optionalLegion = legionRepository.findById(legionId);
+            Optional<Legion> optionalLegion = legionRepository.findById(id);
             if (!optionalLegion.isPresent()) {
                 return ResponseEntity.unprocessableEntity().build();
             }
